@@ -40,25 +40,28 @@ define gd = Character('Goddess',ctc="ctc_blink",
 
 
 #Background
-image BG_City = im.Scale("images/BG/City.png",1280,720)
-image BG_City_BW= im.Sepia(im.Scale("images/BG/City.png",1280,720))
-image BG_City_Invert= im.MatrixColor(im.Scale("images/BG/City.png",1280,720), im.matrix.invert())
-image BG_Modern_Room = im.Scale("images/BG/ModernRoom.png",1280,720)
-image BG_Sky = im.Scale("images/BG/Sky.png",1280,720)
+image BG_City = "images/BG/City.png"
+image BG_City_BW= im.Sepia("images/BG/City.png")
+image BG_City_Invert= im.MatrixColor("images/BG/City.png", im.matrix.invert())
+image BG_Modern_Room = "images/BG/ModernRoom.png"
+image BG_Sky = "images/BG/Sky.png"
+image BG_Forest Day= "images/BG/Forest_Day.png"
+image BG_ForestPath Day= "images/BG/ForestPath_Day.png"
+
+
 image Selection_Forest = im.Scale("images/BG/Forest_Selection.png" , 280, 600)
 image Selection_Forest2 = im.Scale("images/BG/Forest_Selection.png" , 350, 640)
 image Selection_Castle = im.Scale("images/BG/Castle_Selection.png" , 280, 600)
 image Selection_Castle2 = im.Scale("images/BG/Castle_Selection.png" , 350, 640)
 
-image BG_Street = "BG/Street.jpg"
-image BG_School = "BG/School.jpg"
-image BG_Hall = "BG/Hall.jpg"
-image BG_Hospital = "BG/Hospital.jpg"
-image BG_Bedroom = "BG/Bedroom.png"
-#Sprite
 
+
+
+#Sprite#####################################################################
+
+#Goddess
 image Goddess:
-        im.Scale("images/Goddess/Goddess2.png",700,700)
+        "images/Goddess/Goddess2.png"
         xalign 0.5 yalign 0.7
         linear 1.0 xalign 0.45 yalign 0.5
         linear 2.0 xalign 0.40 yalign 0.55
@@ -70,7 +73,7 @@ image Goddess:
         linear 2.0 xalign 0.5 yalign 0.7
         repeat
 image Goddess_Wings:
-        im.Scale("images/Goddess/Wings.png",700,700)
+        "images/Goddess/Wings.png"
         xalign 0.5 yalign 0.7
         linear 1.2 xalign 0.45 yalign 0.55
         linear 1.8 xalign 0.40 yalign 0.53
@@ -82,23 +85,30 @@ image Goddess_Wings:
         linear 1.8 xalign 0.5 yalign 0.7
         repeat
 
+#Goblin
+image Goblin_Weak:
+        "images/Goblin/Goblin.png"
+        yalign 0.7
 
+#Lisa
+image Lisa Smile:
+        "images/Elisabeth/ElisabethPose01-1.png"
+        yalign 3.0
 
-image Lizette_Smile = "Lizette/Lizette_Smile.png"
-image Lizette_Smile2 = "Lizette/Lizette_Smile2.png"
-image Lizette_Angry = "Lizette/Lizette_Angry.png"
-image Lizette_Confused = "Lizette/Lizette_Confused.png"
-image New = "Lizette/Heroine.png"
+image Lisa Smile2:
+        "images/Elisabeth/ElisabethPose02-1.png"
+        yalign 1.0
 
-image Setsuna_Angry = "Setsuna/FS1-angry1.png"
-image Setsuna_Normal = "Setsuna/FS1-smile1.png"
-image Setsuna_Smile = "Setsuna/FS1-smile3.png"
-image Setsuna_Wink = "Setsuna/FS1-wink3.png"
+image Lisa Sad:
+        "images/Elisabeth/ElisabethPose01-3.png"
+        yalign 0.7
+
+image Lisa Smirk:
+        "images/Elisabeth/ElisabethPose02-2.png"
+        yalign 1.0
 
 #CG
-image CG_Lizette= "CG/Lizette.jpg"
-image CG_Sylvie= "CG/Sylvie.jpg"
-image CG_Setsuna_Sleeping = "CG/Sleeping_Setsuna.jpg"
+
 
 #Music
 define audio.music_refresh = "sounds/Innocent-Years_Looping.mp3"

@@ -94,14 +94,15 @@ screen input(prompt):
     style_prefix "input"
 
     window:
-
+        style "input2"
         vbox:
             xpos gui.text_xpos
             xanchor gui.text_xalign
-            ypos gui.text_ypos
+            ypos 1.5
 
             text prompt style "input_prompt"
             input id "input"
+           
 
 
 style input_prompt is default
@@ -110,11 +111,20 @@ style input_prompt:
     xmaximum gui.text_width
     xalign gui.text_xalign
     text_align gui.text_xalign
+    background Image("gui/textbox.png", xalign=0.5, yalign=0.5)
 
 style input:
     xmaximum gui.text_width
     xalign gui.text_xalign
     text_align gui.text_xalign
+
+style input2:
+    xmaximum gui.text_width
+    xalign gui.text_xalign
+    text_align gui.text_xalign
+    background Image("gui/textbox.png", xalign=0.0, yalign=0.6)
+    
+    
 
 ## Choice screen ###############################################################
 ##
@@ -142,6 +152,7 @@ style choice_button is button
 style choice_button_text is button_text
 
 style choice_vbox:
+    
     xalign 0.5
     ypos 270
     yanchor 0.5
