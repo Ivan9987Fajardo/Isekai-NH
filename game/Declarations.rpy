@@ -107,6 +107,12 @@ image Lisa Smirk:
         "images/Elisabeth/ElisabethPose02-2.png"
         yalign 1.0
 
+#Guild master
+image GuildMaster:
+        "images/GuildMaster/Guild Master.png"
+        yalign -2.0
+
+
 #CG
 
 

@@ -7,6 +7,7 @@ init:
     image black = Solid((0, 0, 0, 255))
     image white = Solid((255, 255, 255, 255))
     image grey = Solid((128, 128, 128, 255))
+    image flashback = Solid((62, 39, 13, 150))
     image red = Solid("#ff0000")
     image white = Solid("#ffffff")
 
@@ -198,7 +199,6 @@ label intro:
     mc "Hmm.. If I die again in those worlds, will I have a new set of worlds to choose from?"
     gd "Nope. You will go straight to heaven… I think?"
     gd "So, What world do you want to go to?"
-label test:
     call screen world with dissolve
     # -WORLD CHOICE-
     gd "You have chosen {i}{b}[world] World{/b}{/i}, What name do you want to use in this world?"
@@ -303,6 +303,9 @@ label adventureWorld:
     lisa "Okay here we are. The Adventurers Guild."
     lisa "This is where all the Adventurers in this kingdom find work."
     lisa "Come, I’ll introduce you to the guild master"
+    hide Lisa
+    show GuildMaster 
+    with Dissolve(0.5)
     "Guild Master" "You must be [playerName], a New Gen right?"
     mc "Ahh, Yess, I just came into this world today. Exploring the things that I can do here."
     mc "Is there anything I can do here to earn some money?"
@@ -310,27 +313,48 @@ label adventureWorld:
     "Guild Master" "Ahh! Before anything else, Let me measure your magic capacity first.. Maybe you can help in defeating the Elder Goblin."
     "Guild Master" "Just hold this magic crystal in your hand and wait for the light to appear"
     nr "This magic crystal is kinda cold.."
+
     nr "Feels like it’s sucking up some energy in my body.."
+    show GuildMaster with move: 
+        xpos 0.3
+    show Lisa Smile:
+        xpos 0.4
+        
+    with Dissolve(0.5)
     lisa " Grandmaster, I forgot to mention."
     lisa "We fought a Goblin monster on the way here. Just the weak ones though"
     "Guild Master" "You need to go back there, Maybe there’s a Goblin General lurking there."
+
     mc "Uhmm.. Guys?"
     mc "There’s a light coming from the crystal."
     "Guild Master" "Oh, It must be the--"
+    window hide
+    show white with Dissolve(2)
+    pause(1)
+    hide white with Dissolve(2)
+    window show
     # *Super Light*
     # *crack*
     nr "The Crystal broke.."
     "Guild Master" "Oh my god… That crystal has been used for generations, and no one has ever reached beyond the crystal’s limit"
     mc "What does it mean??"
+    show Lisa Smile2:
+        xpos 0.4
+    with Dissolve(0.2)
     lisa "It means you have an unlimited supply of magic capacity. An endless potential I guess.."
+    "Guild Master" "I must report this to the council.."
     "Guild Master" "Maybe you can even free us all in the shackles of the Goblin Lord.."
+    hide GuildMaster with moveoutleft
+    show Lisa Smile2 with move:
+        xalign 0.5
+    with Dissolve(0.5)
     mc "Goblin Lord?"
     lisa "Yes. There are 3 types of Goblin."
-    lisa "The first one is the Goblin Monster, the one that we have defeated earlier. "
+    lisa "The first one is the {i}Goblin Monster{/i}, the one that we have defeated earlier. "
     lisa "The weakest among the three."
-    lisa "The next one is the Goblin General."
+    lisa "The next one is the {i}Goblin General{/i}."
     lisa "They are the one who gives orders to the Goblin Monsters."
-    lisa "And the past one is the Goblin Lord."
+    lisa "And the last one is the {i}Goblin Lord{/i}."
     lisa "The Goblin Lord is the one who corrupts and controls this world."
     lisa "No one has ever dared to challenge the Goblin Lord because of his tremendous amount of mana in him."
 
@@ -343,23 +367,41 @@ label adventureWorld:
     nr "I don’t think I can handle this big of a responsibility"
     lisa "Oh Sure… Take your time."
     lisa "I’ll show you where you’ll be staying for the night"
+    scene black with fade
     # *Room*
+label test:
+    show Lisa Smile with Dissolve(0.5)
     lisa "This will be your room"
     lisa "Tomorrow I’ll show you how to accept quest in the mission board"
     mc "Okay Thanks! Good Night Lisa."
     lisa "Good Night [playerName]"
+    hide Lisa with Dissolve(0.5)
 
     nr "..."
+    scene BG_ForestPath Day
+    show GuildMaster: 
+        xalign 0.1
+    show Lisa Smile:
+        xalign 0.9
+    show flashback
+    show white 
+    with Dissolve(1)
+    pause(1)
+    hide white with Dissolve(1)
+
+    
     # *flashback*
     # *shining light*
     # *crack*
     lisa "It means you have an unlimited supply of magic capacity. An endless potential I guess.."
-    lisa "But you, You have the potential to defeat and free us from the evil goblins."
+    lisa "You have the potential to defeat and free us from the evil goblins."
     mc "Unlimited potential huh.."
     lisa "Will you help us defeat the Goblin Lord?"
+    scene black with Dissolve(1)
     # End Flashback
     nr "Maybe this is why I am sent here.."
     nr "To defeat and free the people from the Goblin Lord…"
+    scene black with Dissolve(3)
     # Scene to Black
     # *alarm clock*
     nr "Ohh, That was good sleep"

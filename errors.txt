@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/IngameScreen.rpy", line 105: u'background' is not a keyword argument or valid child for the vbox statement.
-    background Image("gui/textbox.png", xalign=0.5, yalign=0.0)
-              ^
+File "game/script.rpy", line 333: expected 'simple_expression' not found.
+    yalign 
+           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Jul 25 19:38:04 2020
+Sun Jul 26 17:04:59 2020
