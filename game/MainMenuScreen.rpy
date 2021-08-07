@@ -6,8 +6,9 @@
 #Main Menu
 image Frame:
     "images/MenuItems/Mainmenu_Frame.png"
-    xpos 800
-    ypos 200
+    xpos 580
+    ypos -60
+    zoom 0.4
 
 screen main_menu():
     #$ renpy.transition(dissolve)
@@ -18,53 +19,53 @@ screen main_menu():
 
     add "Snow"
     add "Frame"
-    
-    # add "images/MenuItems/Header.png" xpos 60 ypos 40 
+
+    # add "images/MenuItems/Header.png" xpos 60 ypos 40
 
     # This empty frame darkens the main menu.
-    
+
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     # use navigation
-    
+
     imagebutton:
-        xpos 860 ypos 249
+        xpos 860 ypos 209
         idle "images/buttons/Start_Idle.png"
         hover "images/buttons/Start_Hover.png"
         #hover_sound "Sounds/hover1.ogg"
         # activate_sound "sounds/PowerUp9.mp3"
         action (Start('test'),Hide("main_menu"))
-    
+
     imagebutton:
-        xpos 860 ypos 343
+        xpos 860 ypos 303
         idle "images/buttons/Load_Idle.png"
         hover "images/buttons/Load_Hover.png"
         #hover_sound "Sounds/hover1.ogg"
         activate_sound "sounds/Quirky33.mp3"
         action (Show('load',inMain=True,transition=dissolve))
-        
+
     imagebutton:
-        xpos 860 ypos 437
+        xpos 860 ypos 397
         idle "images/buttons/Options_Idle.png"
         hover "images/buttons/Options_Hover.png"
         #hover_sound "Sounds/hover1.ogg"
         activate_sound "sounds/Quirky33.mp3"
         action (Show('preferences',inMain=True,transition=dissolve))
-        
-    
-        
+
+
+
     imagebutton:
-        xpos 860 ypos 531
+        xpos 860 ypos 491
         idle "images/buttons/Quit_Idle.png"
         hover "images/buttons/Quit_Hover.png"
         #hover_sound "Sounds/hover1.ogg"
         activate_sound "sounds/Quirky33.mp3"
         action (Quit())
-        
-        
 
-         
-   
+
+
+
+
 
 
 style main_menu_frame is empty
@@ -96,5 +97,3 @@ style main_menu_text:
 
 style main_menu_title:
     size gui.title_text_size
-
-

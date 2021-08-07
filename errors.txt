@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 333: expected 'simple_expression' not found.
-    yalign 
-           ^
+File "game/script.rpy", line 623: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Jul 26 17:04:59 2020
+Mon Apr 05 16:20:27 2021
