@@ -102,6 +102,7 @@ label intro:
     $ renpy.pause(2,hard=True)
     scene BG_City_BW with Dissolve(1)
     mc "….."
+    
     mc "Wait what?"
     mc "What’s happening?"
     mc "Where’s everybody??"
@@ -358,7 +359,7 @@ label adventureWorld:
     lisa "And the last one is the {i}Goblin Lord{/i}."
     lisa "The Goblin Lord is the one who corrupts and controls this world."
     lisa "No one has ever dared to challenge the Goblin Lord because of his tremendous amount of mana in him."
-    
+
     lisa "But you, You have the potential to defeat and free us from the evil goblins."
     show Lisa Smile2
     lisa "Will you help us defeat the Goblin Lord?"
@@ -468,7 +469,7 @@ label adventureWorld:
         mc "I need to train and be familiar in this world first."
         show Lisa Smile4 with Dissolve(0.5)
         lisa "Don’t worry, I’ll still train so you will be prepared to do quests"
-        show Lisa Angry 
+        show Lisa Angry
         lisa "So prepare yourself! "
         mc "Really? Thank you Lisa."
         nr "Lisa is really a great girl."
@@ -493,7 +494,7 @@ label adventureWorld:
     lisa "Hold your bow higher.."
     lisa "Then focus all your energy in your left hand.."
     lisa "Imagine yourself holding an arrow.."
-    
+
 
     # *Close eyes*
     scene black with Dissolve(0.2)
@@ -612,8 +613,8 @@ label adventureWorld:
         scene red with Dissolve(1.0)
         pause(1.0)
         scene black with Dissolve(0.5)
-        scene BG_Dining_Room 
-        show Lisa Sad 
+        scene BG_Dining_Room
+        show Lisa Sad
         with Dissolve(0.5)
         # *goblin sounds*
         # *hit sounds*
@@ -753,10 +754,10 @@ label adventureWorld:
     nr "For her…"
     # *Open eyes Reddish screen*
 label test:
-    scene BG_Training 
+    scene BG_Training
     show reddish
     with Dissolve(0.5)
-    
+
     mc "I can see some reddish aura around me"
     show Lisa Smile3 with Dissolve(0.5)
     lisa "That reddish aura is the sign that Spirit magic is currently activated"
