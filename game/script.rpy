@@ -731,11 +731,9 @@ label adventureWorld:
     # *show Lisa Smile Flashback*
     nr "For her…"
     # *Open eyes Reddish screen*
-label test:
     scene BG_Training
     show reddish
     with Dissolve(0.5)
-
     mc "I can see some reddish aura around me"
     show Lisa Smile3 with Dissolve(0.5)
     lisa "That reddish aura is the sign that Spirit magic is currently activated"
@@ -1218,6 +1216,71 @@ label test:
         nr "If I can just rewind the time, I’ll make sure that Lisa will make it out alive"
 
     return
+    
+label adventureWorld_Good:
+    # *mute*
+    # *Flicker Reddish and black color*
+    # *mc "AAAAAHHHHHHHHHH?!"
+    # *screen to black*
+    # *blink*
+    # *Lisa gone*
+    "Goblin Lord": "What?"
+    # *Hpunch*
+    "Goblin Lord": "What is the meaning of this?"
+    # *VPunch*
+    # *Vpunch*
+    lisa "Demon Magic…"
+    lisa "Boosts one’s physical and magical abilities by 300%"
+    lisa "This magic has been long lost for a long time…"
+    lisa "I never knew you had such power.. "
+    lisa "Please hero, Save us all from the Goblin Lord. You are our only hope. "
+    # *insert epic music*
+    "Goblin Lord": "NO! It can't be! I'm the most powerful in this world! "
+    # *GL powerup, Color Violet GL*
+    "Goblin Lord": "Ultra Shockwave! "
+    # *Ground shaking*
+    mc "Pathetic, Is that all you got? "
+    # *snap**shaking stop*
+    "Goblin Lord": "You nullified my magic?? "
+    mc "Now it's my turn. "
+    mc "64 Strikes Demon Claws! "
+    # *Claw attacks*
+    "Goblin Lord": "ACKKK! "
+    "Goblin Lord": "How? How can you be this strong? "
+    "Goblin Lord": "I sacrificed a lot to make it to this day.. "
+    mc "I'm not strong… I'm just giving you the justice for all the people that you slain. "
+    mc "Now, It's time for me to end your miserable life. "
+    "Goblin Lord": "No! It can't be!"
+    mc "DEMON EYE! "
+    "Goblin Lord": "STOP! "
+    mc "NOW BEGONE! "
+    mc "DEMONIC BLINK! "
+    # *Blink*
+    # *GL turned to stone*
+    mc "Now peace has been restored to this world. "
+    lisa "Thank you hero.. "
+    lisa "Thank you for saving our world.. "
+    # *Scene to black*
+    # *1 week after*
+    nr "It's been a week since I defeated the Goblin Lord.. "
+    lisa "The're are no more shortage in the food supplies for the people. "
+    lisa "It's all because of you Mc "
+    lisa "Thank you for giving us back our freedom. "
+    mc "I can't do all of it by myself. It's all thanks to you for always being by my side Lisa. "
+    lisa "No problem Mc! I'll always be by your side. "
+    nr "Maybe this is the right time.. "
+    mc "Lisa, Can I ask you something? "
+    lisa "What is it? Go ahead Mc. "
+    mc "Uhmm, I know this is a bit embarrassing but… "
+    mc "Can you be mine? And I'll be yours.."
+    # *Expression to shy* 
+    lisa "Mc, Is this--? "
+    # *expression to smile*
+    lisa "If you're fine with someone like me, Then I'll gladly be yours Mc.. "
+    mc "I love you Lisa.. "
+    lisa "I love you too Mc… "
+    return
+
 
 label adventureWorld_Bad:
     mc "This is now my 2nd life and I just want to enjoy the rest of it."
