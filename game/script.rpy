@@ -1373,6 +1373,7 @@ label demonWorld:
     # Black Screen
     # Fade to background
     scene BG_Garden_Day
+    with fade
     mc "Woah..."
     nr "So this is the demon world."
     nr "This place looks really fantasy like."
@@ -1382,6 +1383,8 @@ label demonWorld:
     mc "…."
     nr "It’s a cute demon girl."
     mc "Um.. hello there…"
+    show Lucille Angry
+    with Dissolve(0.5)
     lucille "Th-This is the future demon king?"
     show Lucille Mad with Dissolve(0.5)
     lucille "How could I have summoned such a weak looking mongrel."
@@ -1424,6 +1427,7 @@ label demonWorld:
     mc "Pleasure to be working with you."
     lucille "Yes but umm..."
     lucille "Please restrain yourself a bit around me first."
+    show Lucille HappyBlush
     lucille "I’m still quite inexperienced."
     mc "Huh? Okay..."
     nr "What does she mean restrain myself?"
