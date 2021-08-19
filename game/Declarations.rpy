@@ -9,6 +9,17 @@ define director.transitions = [ "Dissolve(0.5)", "Pixellate" ]
 define director.spacing = 0
 
 
+#Effects
+define flashbulb = Fade(0.2, 0.0, 0.8, color='#fff')
+
+
+
+#InteractiveDirector
+define director.show_tags = ("Lucille" "Demon" "Lisa" "GuildMaster")
+define director.transitions = [ "Dissolve(0.5)", "Pixellate", "flashbulb", "vpunch" ]
+define director.spacing = 0
+
+
 #ClickToContinue
 image ctc_blink:
        "GUI/arrow.png"
@@ -34,6 +45,8 @@ define mc = Character('[playerName]',ctc="ctc_blink",
         ctc_position="fixed")
 define lisa = Character('Elisabeth',ctc="ctc_blink",
         ctc_position="fixed")
+define lisa2 = Character('Elisabeth',ctc="ctc_blink",
+        ctc_position="fixed", who_color="#ff4d94")        
 define lucille = Character('Lucille',ctc="ctc_blink",
         ctc_position="fixed")
 define n = Character('???',ctc="ctc_blink",
@@ -62,6 +75,10 @@ image BG_Throne_Room = "images/BG/Throne room.png"
 image BG_Forest Day= "images/BG/Forest_Day.png"
 image BG_ForestPath Day= "images/BG/ForestPath_Day.png"
 image CG_Goddess = "images/CG/Goddess.png"
+image BG_ForestPath Night= "images/BG/ForestPath_Night.png"
+image BG_Rustic_Room Day = "images/BG/rustic room morning.png"
+image BG_Rustic_Room Night = "images/BG/rustic room gabi.png"
+image BG_Training = "images/BG/Training Grounds.png"
 
 
 image Selection_Forest = im.Scale("images/BG/Forest_Selection.png" , 280, 600)
@@ -113,14 +130,43 @@ image Lisa Smile:
 image Lisa Smile2:
         "images/Elisabeth/ElisabethPose02-1.png"
         yalign 0.5
+        ypos 1.08
+
+image Lisa Shy1:
+        "images/Elisabeth/ElisabethPose01-2.png"
+        ypos 1.08
+
+image Lisa Shy2:
+        "images/Elisabeth/ElisabethPose02-3.png"
+        ypos 1.08
+
+image Lisa Normal:
+        "images/Elisabeth/ElisabethPose01-4.png"
+        ypos 1.08
+
+image Lisa Smile2:
+        "images/Elisabeth/ElisabethPose02-1.png"
+        ypos 1.08
+
+image Lisa Smile3:
+        "images/Elisabeth/ElisabethPose03-1.png"
+        ypos 1.08
+
+image Lisa Smile4:
+        "images/Elisabeth/ElisabethPose03-3.png"
+        ypos 1.08
 
 image Lisa Sad:
         "images/Elisabeth/ElisabethPose01-3.png"
-        yalign 0.7
+        ypos 1.13
 
 image Lisa Smirk:
         "images/Elisabeth/ElisabethPose02-2.png"
-        yalign 1.0
+        ypos 1.08
+
+image Lisa Angry:
+        "images/Elisabeth/ElisabethPose03-2.png"
+        ypos 1.08
 
 #Guild master
 image GuildMaster:
@@ -164,9 +210,50 @@ image Lucille Shocked:
         "images/Lucille/LucillePose03-2.png"
         yalign 0.5
 
+
+image Lucille Normal 2:
+        "images/Lucille/LucillePose02-1.png"
+        yalign 0.5
+
+image Lucille Happy:
+        "images/Lucille/LucillePose02-2.png"
+        yalign 0.5
+
+image Lucille Embarassed:
+        "images/Lucille/LucillePose02-3.png"
+        yalign 0.5
+
+image Lucille Pose:
+        "images/Lucille/LucillePose03-1.png"
+        yalign 0.5
+
+image Lucille Shocked:
+        "images/Lucille/LucillePose03-2.png"
+        yalign 0.5
+
+image Lucille HappyBlush:
+        "images/Lucille/LucillePose01-5.png"
+        yalign 0.5
+
+image Lucille Angry:
+        "images/Lucille/LucillePose01-6.png"
+        yalign 0.5
+
+image Lucille MadBlush:
+        "images/Lucille/LucillePose02-4.png"
+        yalign 0.5
+
+image Lucille Sad:
+        "images/Lucille/LucillePose02-5.png"
+        yalign 0.5
+
 #DemonMaid
 image Demon Maid:
         "images/DemonMaid/DemonMaid-1.png"
+        yalign 0.5
+
+image Demon Maid 2:
+        "images/DemonMaid/DemonMaid-1-2.png"
         yalign 0.5
 
 image Demon Maid Sword:
@@ -175,6 +262,7 @@ image Demon Maid Sword:
 
 
 #CG
+image CG_Goddess = "images/CG/Goddess.png"
 
 
 #Music

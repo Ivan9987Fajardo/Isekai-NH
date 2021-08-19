@@ -8,6 +8,7 @@ init:
     image white = Solid((255, 255, 255, 255))
     image grey = Solid((128, 128, 128, 255))
     image flashback = Solid((62, 39, 13, 150))
+    image reddish = Solid((255, 25, 25, 150))
     image red = Solid("#ff0000")
     image white = Solid("#ffffff")
 
@@ -271,7 +272,8 @@ label adventureWorld:
     lisa "Old gen are beings who originally lived in this world."
     mc "So you’re an old gen or a new gen? I’m [playerName] by the way."
     lisa "I originally lived in this world so you can categorize me as  an old gen."
-    show Lisa Smile with Dissolve(0.5)
+
+    show Lisa Smile3 with Dissolve(0.5)
     lisa "I’m Elisabeth from the Elf clan, but you can call me Lisa."
     nr "So I’m a new gen and I have magic powers??"
     mc "Okay Lisa, Can you explain to me this magic thing?"
@@ -347,26 +349,29 @@ label adventureWorld:
     with Dissolve(0.5)
     mc "Goblin Lord?"
     lisa "Yes. There are 3 types of Goblin."
+    show Lisa Normal at center
     lisa "The first one is the {i}Goblin Monster{/i}, the one that we have defeated earlier. "
+    show Lisa Normal
     lisa "The weakest among the three."
     lisa "The next one is the {i}Goblin General{/i}."
     lisa "They are the one who gives orders to the Goblin Monsters."
     lisa "And the last one is the {i}Goblin Lord{/i}."
     lisa "The Goblin Lord is the one who corrupts and controls this world."
     lisa "No one has ever dared to challenge the Goblin Lord because of his tremendous amount of mana in him."
-
+    
     lisa "But you, You have the potential to defeat and free us from the evil goblins."
+    show Lisa Smile2
     lisa "Will you help us defeat the Goblin Lord?"
     nr "I have the power to defeat the Goblin Lord?"
     nr "The power to free the people of this world?"
     mc "Wait, This is too much information for me.."
     mc "Can I think for a while before giving you my answer?"
     nr "I don’t think I can handle this big of a responsibility"
+    show Lisa Sad
     lisa "Oh Sure… Take your time."
     lisa "I’ll show you where you’ll be staying for the night"
     scene black with fade
     # *Room*
-label test:
     show Lisa Smile with Dissolve(0.5)
     lisa "This will be your room"
     lisa "Tomorrow I’ll show you how to accept quest in the mission board"
@@ -401,24 +406,36 @@ label test:
     scene black with Dissolve(3)
     # Scene to Black
     # *alarm clock*
+    scene BG_Rustic_Room Day with Dissolve(1)
     nr "Ohh, That was good sleep"
     nr "Better fix myself"
     # *knock knock*
+    show Lisa Smile2
     lisa "[playerName]?"
     mc "Oh Hey Lisa."
     lisa "Are you ready to take some quests?"
     # *Flashback*
+    scene BG_ForestPath Day
+    show Lisa Smile2 with Dissolve(0.5)
+    show flashback
+    with Dissolve(1)
     lisa "Will you help us defeat the Goblin Lord?"
+    scene black with Dissolve(1)
+    scene BG_Rustic_Room Day with Dissolve(1)
+    show Lisa Smile2 with Dissolve(0.5)
     # End Flashback
     mc "Before that…"
     mc "About defeating the Goblin King.. I think I have an answer.."
+    show Lisa Sad with Dissolve(0.5)
     lisa "Wait, First I need to apologize to you…"
     lisa "Sorry for asking you to save the world hastily.."
     lisa "I know that you’re still new to this world and need more time and experience…"
+    show Lisa Smile4 with Dissolve(0.5)
     lisa "But don’t worry, I’m here to train you to maximize the use of your potential."
     lisa "I’ll help you polish your skills and techniques so you will be ready for any battle…"
     lisa "We will have a lot of adventures together.. "
     nr "Do I really have the power to free the people?"
+    show Lisa Smile2 with Dissolve(0.5)
     lisa "So [playerName], Will you help us defeat the Goblin Lord?"
     lisa "Will you be our hero in this world?"
     menu:
@@ -433,8 +450,10 @@ label test:
         mc "Even though it is kinda scary, I know that you and everyone else will always be in my back right?"
         nr "Maybe this is my destiny after all. That goddess gave me this power to help everyone else."
         mc "Thank you Lisa. For making me realize that I can do more in my life."
+        show Lisa Sad with Dissolve(0.5)
         lisa "No, I must be the one who’s giving you thanks. For helping us free this world."
         lisa "Besides, Don’t thank me yet. Our training has not yet started"
+        show Lisa Smirk with Dissolve(0.5)
         lisa "I hope you don’t regret your decision. So prepare yourself!"
         mc "I’ll never regret this.. "
         nr "I hope so…"
@@ -443,66 +462,98 @@ label test:
         mc "I still can’t imagine myself killing the Goblin Lord.."
         mc "I still need to learn a lot to have the courage of carrying that kind of task"
         nr "I can’t do it… I can’t fight someone like that.."
+        show Lisa Sad with Dissolve(0.5)
         lisa "Really? Too bad.. But I really think that you can defeat him"
         lisa "But I don’t want to force you in doing something half heartedly"
         mc "I need to train and be familiar in this world first."
+        show Lisa Smile4 with Dissolve(0.5)
         lisa "Don’t worry, I’ll still train so you will be prepared to do quests"
+        show Lisa Angry 
         lisa "So prepare yourself! "
         mc "Really? Thank you Lisa."
         nr "Lisa is really a great girl."
 
     ##Training
+    scene BG_Training with Dissolve(1)
+    show Lisa Smile3 with Dissolve(0.5)
     lisa "So this is where we’re going to train every day until you can defeat a single goblin"
     mc "This place is spacious"
     nr "The scenery and atmosphere here is also good"
     lisa "We need to train in a large place so no one will get hurt if you can’t control your powers."
     mc "I’ll try my best not to destroy things. Hehehe"
+
     lisa "Okay! Since you have unlimited magic potential, I guess you can use all 4 types of magic right?"
     mc "I think so? I don’t have an idea."
+    show Lisa Smile with Dissolve(0.5)
     lisa "Let’s try it out! First, try to create a light arrow."
     lisa "Do a pose like you’re shooting an arrow"
     lisa "Hold your imaginary bow in your right hand, then the arrow on the left"
     mc "Am I doing this right?"
+    show Lisa Normal
     lisa "Hold your bow higher.."
     lisa "Then focus all your energy in your left hand.."
     lisa "Imagine yourself holding an arrow.."
+    
+
     # *Close eyes*
+    scene black with Dissolve(0.2)
     nr "Arrow… Arrow.."
     nr "Imagine yourself holding an arrow.."
     nr "My hands feel warm.."
     # *Opens eyes*
+    scene BG_Training with Dissolve(0.5)
     mc "Woaahhh!"
+    show Lisa Smile with Dissolve(0.5)
     lisa "You did it! Now, Aim it on that rock.."
     lisa "Then release!"
     # *Arrow Sound*
     mc "Light Arrow!"
+    scene white with Dissolve(0.2)
+    pause(1.0)
+    scene BG_Training with Dissolve(0.2)
+    show Lisa Smile
     nr "I missed.."
+    show Lisa Smile4 with Dissolve(0.5)
     lisa "It’s fine! We have a lot of time to practice!"
     lisa "Next one, We need to test if you can use dark magic"
     lisa "Since I’m an elf, Light magic is the only thing that I can use"
+    show Lisa Smile3 with Dissolve(0.5)
     lisa "But I’ll do my best to support you in practicing the different types"
     mc "Thank you. So how can I use dark magic?"
+    show Lisa Normal with Dissolve(0.5)
     lisa "Hmm. The asic type of dark magic is the void."
     lisa "It’s like creating a small black hole in your palms that sucks everything"
     lisa "Open your hands, and imagine holding a mini black hole."
     # *close eyes*
+    scene black with Dissolve(0.5)
     nr "A black hole…. In my palm…"
     nr "It feels cold.."
+    scene BG_Training with Dissolve(0.5)
+    show Lisa Normal
     # *Openm eyes*
     mc "I did it!"
     lisa "Now throw it on that rock. Be careful not to touch it. It can suck your fingers."
+    scene black with Dissolve(0.2)
+    scene BG_Training with Dissolve(0.2)
+    show Lisa Normal
     nr "I missed it.. Again."
+    show Lisa Smile4 with Dissolve(0.5)
     lisa "We have a whole day to practice so don’t worry!"
     lisa "For today, You will only focus practicing Light and Dark Magic."
     mc "How about Nature and Spirit Magic?"
+    show Lisa Smile with Dissolve(0.5)
     lisa "We can practice those on some other day, but today, Light and Dark Magic first."
     lisa "Are you ready for your intense magic training??"
     mc "Yeah.. I think so.."
     lisa "Let’s Goooo!"
+    scene black with Dissolve(1.0)
+    pause(0.5)
+    scene BG_Training with Dissolve(0.5)
     # *dark screen*
 
     mc "Haaahhh… Haaahhh.."
     mc "I can’t do more…"
+    show Lisa Smile2 with Dissolve(0.5)
     lisa "Okay! That’s it for today."
     lisa "You’re a fast learner! You already mastered all the basics of light and dark magic."
     lisa "It took me weeks to master light magic.."
@@ -510,11 +561,14 @@ label test:
     lisa "Good work today [playerName]. I’m so proud of you.."
     mc "It’s all because my trainer is so great and caring.."
     nr "She’s so sweet and caring"
+    show Lisa Shy2 with Dissolve(0.5)
     lisa "Thank you. Let’s go back to the guild hall?"
     mc "Let’s go!"
-
+    scene black with Dissolve(0.5)
     if adventureWorld_Choice1 == True:
         # *dining hall*
+        scene BG_Dining_Room with Dissolve(0.5)
+        show Lisa Smile2 with Dissolve(0.5)
         lisa "[playerName]! Are you alone?"
         mc "Yeah, Just having a quick dinner then I’m off to bed."
         lisa "Me too! Can I eat with you? "
@@ -523,6 +577,7 @@ label test:
         lisa "Good work today! I can’t believe you mastered all those spells in just a single day"
         mc "Thanks! It’s all because of you. You explained all the theories behind those spells really well."
         mc "Just like a mom teaching her child!"
+        show Lisa Sad with Dissolve(0.5)
         lisa "…"
         mc "Lisa? Did I say something wrong?"
         lisa "No.. it’s just that…"
@@ -531,18 +586,35 @@ label test:
         lisa "They died 10 years ago.. "
         lisa "Because of me… "
         lisa "They protected me… From the Goblins!"
+        scene BG_ForestPath Night
+        show flashback
+        with Dissolve(1.0)
         # *Lisa Flashback*
         "Goblin" "Wrayayayys"
-        lisa "Nooooo!"
+        show Goblin_Weak
+        show flashback
+        with Dissolve(0.5)
+        lisa "\"Nooooo!\""
         # *Vpunch to viewer* *Vpunch*
         # *Magic sound effect*
         # *vpunch to goblin*
         # *goblin die*
-        lisa "Mama! Papa! "
+        with hpunch
+        with vpunch
+        lisa2 "\"Mama! Papa!\" "
+        with hpunch
+        with vpunch
         # *More Goblins appear*
         # *screen to dark*
+        scene black with Dissolve(1.0)
         lisa "That was the last time they ever hugged me.. To protect me from the goblins"
-        lisa "No!!!"
+        lisa2 "\"No!!!\""
+        scene red with Dissolve(1.0)
+        pause(1.0)
+        scene black with Dissolve(0.5)
+        scene BG_Dining_Room 
+        show Lisa Sad 
+        with Dissolve(0.5)
         # *goblin sounds*
         # *hit sounds*
         # *screen to red*
@@ -553,6 +625,7 @@ label test:
         mc "I promise that your parents will get the justice that they deserve"
         mc "I will not waste the trust that you have given me. I will make sure that the Goblin Lord will be gone."
         nr "I never knew Lisa had a tragic past."
+        show Lisa Smile with Dissolve(1.0)
         lisa "Thank you [playerName]. You’re the light that I’m waiting for."
         lisa "Okay! It’s time to rest!, We have a long day tomorrow."
         lisa "Thank you for listening to me. Good Night [playerName]"
@@ -562,11 +635,17 @@ label test:
         # *Fade to black*
     if adventureWorld_Choice1 == False:
         # *room*
+        scene BG_Rustic_Room Night with Dissolve(0.5)
         nr "Do I really deserve this kind of training?"
         nr "After I rejected her to help in defeating the goblin lord..."
         mc "I really am a terrible person.."
         # *flashback*
+        scene BG_Training
+        show Lisa Smile2
+        show flashback
+        with Dissolve(1.0)
         lisa "Good work today [playerName]. I’m so proud of you.."
+        scene BG_Rustic_Room Night with Dissolve(0.5)
         # *reality*
         nr "Do I deserve this kind of treatment?"
         mc "Maybe if I try hard enough, I can help her with the Goblin Lord?"
@@ -574,18 +653,22 @@ label test:
         mc "I need more time to think…"
         # *Fade to black*
 
+    scene black with Dissolve(0.5)
     # *knock* knock*
     lisa "[playerName]? Are you awake?"
     mc "Mmmmm…"
     lisa "Wake up [playerName]... It’s time for training.."
     # *Opens eyes*
+    scene BG_Rustic_Room Day with Dissolve(1.0)
     # Knock knock
     lisa "[playerName]? [playerName]?"
+    show Lisa Angry with Dissolve(0.5)
     mc "Oh hey Lisa, What’s up?"
     lisa "Do you know what time is it?"
     mc "Oh, I’m sorry, I just replenished my energy from yesterday’s training through sleep"
     nr "Did I really sleep that long?"
     nr "Well, Sleeping for 10 hours is not bad though."
+    show Lisa Smile2 with Dissolve(0.5)
     lisa "Anyways, Just eat your breakfast and meet me in the training ground okay?"
 
     if adventureWorld_Choice1 == True:
@@ -596,6 +679,9 @@ label test:
         mc "Okay! I’ll be done in a bit."
 
     # *Fade to black*
+    scene black with Dissolve(1.0)
+    scene BG_Training with Dissolve(0.5)
+    show Lisa Smile3 with Dissolve(0.5)
     lisa "Okay today we’re going to test if you can use Nature and Spirit magic."
     lisa "But your performance yesterday is really good, so I think that you’re the first person who can use all 4 types of magic"
     mc "Is it really possible? To use all types of it? Doesn’t it have any drawback to battle or in my body?"
@@ -605,6 +691,7 @@ label test:
     lisa "Shifting different types at a time can really drain your magic energy, so casting a single type is the ideal way of it."
     lisa "This is why I only let you practice Light and Dark magic yesterday.."
     mc "How about in battle? Is it effective to change magic type on every attack?"
+    show Lisa Smile2 with Dissolve(0.5)
     lisa "Well, It is a yes and no."
     lisa "Yes, because firing different types of magic consecutively can really throw off your enemy’s defense."
     lisa "And a No because, there’s a small delay to throw your next attack if they’re from a different magic type."
@@ -612,6 +699,7 @@ label test:
     lisa "About 2 seconds, For example, Try to cast Light Arrows and Light Ball."
     # *show light  ball and arrow*
     nr "I can cast them at the same time.. "
+    show Lisa Smile3 with Dissolve(0.5)
     lisa "You can easily cast light arrows right after a light ball.."
     lisa "Then try to cast a Dark Void and a Light ball at the same time."
     # *Show light ball…
@@ -619,9 +707,11 @@ label test:
     # *Show Dark Void
     mc "There’s a 4 second delay in casting Dark Void.."
     nr "It feels like there’s something that’s blocking the magic to pass through."
+    show Lisa Smile1 with Dissolve(0.5)
     lisa "Well, It’s just your 2nd day of training. 2 seconds casting delay is the fastest that you can do."
     lisa "So now, Let’s start your training!"
     mc "Yeah, sure!"
+    show Lisa Normal with Dissolve(0.5)
     lisa "Okay, You’re going to try Nature magic.."
     lisa "Nature Magic is just like controlling things in your surroundings. "
     lisa "See this glass of water?"
@@ -633,8 +723,12 @@ label test:
     nr "It starts moving on my will…"
     mc "Just a little more…"
     mc "I did it!"
+    show Lisa Smile2 with Dissolve(0.5)
     lisa "Okay Good. Now you have an idea how to move nature elements around you.."
     lisa "You’re going to try moving rocks, fire and air next…"
+    scene black with Dissolve(1.0)
+    scene BG_Training with Dissolve(0.5)
+    show Lisa Smile3 with Dissolve(0.5)
     # *black screen*
     lisa "Okay Good. You finished all 4 Nature elements."
     mc "I only have Spirit Magic right??"
@@ -648,14 +742,24 @@ label test:
     lisa "You just need to believe in yourself.."
     lisa "Focus all your energy in your body, and believe that you can do anything."
     lisa "Be confident in yourself."
+    scene black with Dissolve(0.5)
     # *Eyes closed*
     nr "I can do this… The power…"
     nr "I'm the strongest person in this world…"
     nr "I can do anything.."
+    show Lisa Smile2
+    show flashback
+    with Dissolve(0.5)
     # *show Lisa Smile Flashback*
     nr "For her…"
     # *Open eyes Reddish screen*
+label test:
+    scene BG_Training 
+    show reddish
+    with Dissolve(0.5)
+    
     mc "I can see some reddish aura around me"
+    show Lisa Smile3 with Dissolve(0.5)
     lisa "That reddish aura is the sign that Spirit magic is currently activated"
     lisa "Your mana drains up fast when Spirit Magic is activated, so use it wisely"
     nr "My body feels so light.."
@@ -2197,6 +2301,7 @@ label demonWorld:
     nr "I will be the demon king…"
     nr "No… I AM the demon king!"
     mc "Turn On Fountain!"
+    with flashbulb
     # Whoosh
     show Lucille Happy
     with Dissolve(0.5)
@@ -2249,11 +2354,14 @@ label demonWorld:
 
     nr "We kept on training royal magic for the following days."
     scene BG_Garden_Night_2
+    with Dissolve(0.5)
     show Demon Maid
     with Dissolve(0.5)
     "Demon Maid" "Milady, You two should take a break."
     "Demon Maid" "I suggest stopping for today, he’s already low on mana."
     hide Demon
+    with Dissolve(0.5)
+    show Lucille Normal
     with Dissolve(0.5)
     lucille "I suppose we have been using magic a lot these past few days."
     mc "I feel fine, let’s keep going for a while longer..."
@@ -2571,6 +2679,8 @@ label demonWorld_Good:
 label demonWorld_Normal:
     # Hallway
     scene BG_Castle_Hall_Day
+    show Demon Maid
+    with Dissolve(0.5)
     "Demon Maid" "Good morning master."
     mc "Oh, good morning."
     mc "Have you seen Lucille? I haven’t seen her since breakfast."
@@ -2588,33 +2698,45 @@ label demonWorld_Normal:
     mc "H-How far? We’re not really like that yet."
     mc "We have too much important stuff to do."
     "Demon Maid" "...It all depends on what you consider important."
+    hide Demon
+    show Lucille Smile
+    with Dissolve(0.5)
     lucille "Hey, There you are [playerName]."
     "Demon Maid" "Hello, Milady."
     mc "Oh, Lucille."
+    show Lucille Normal
     lucille "Oh, Did I interrupt? Were you two talking about something?"
     mc "Nah we were just chatting about y'know… demon stuff."
     "Demon Maid" "…"
+    show Lucille Smug
     lucille "Nevermind that, come with me. I have some good news to discuss with you."
     mc "That sounds promising.."
     # Library
     scene BG_Library
     mc "What’s this about Lucille?"
+    show Lucille Happy
     lucille "I had just gotten back from a meeting with some of the top demon officials."
     lucille "I got them to agree to officially acknowledge you as part of the royal family."
     mc "Wait,  Does that mean…."
+    show Lucille HappyBlush
     lucille "That’s right, we’re getting marrie--"
     mc "I’m finally gonna become the demon king!"
+    show Lucille MadBlush
+    with Dissolve(0.5)
     lucille "…"
     mc "...What? Did I say something wrong?"
+    show Lucille Normal 2
     lucille "It’s nothing you’re absolutely right."
     mc "Why do you suddenly look mad?"
     lucille "I’m not mad!"
     mc "Okay.. So I’m the demon king now? Just like that?"
+    show Lucille Normal
     lucille "Well.. Not yet actually."
     lucille "We still have to do an event to officially acknowledge you as the new demon king."
     mc "Oh.. You mean like a coronation?"
     lucille "Yes, exactly. It would be a perfect event to introduce the new king to the demon public."
     mc "I hope they won’t turn out to hate me or something."
+    show Lucille Smile
     lucille "There may be some opposition at first, but I’m sure you’ll gain their trust eventually."
     lucille "Here’s some reference. You better prepare for the coronation ceremony right away."
     nr "After everything I’ve been through… I’m actually gonna be crowned the demon king."
@@ -2625,24 +2747,30 @@ label demonWorld_Normal:
     # Whisper whisper
     mc "Woah, there are a lot more people than I thought there would be."
     mc "I’m getting kinda nervous about this."
+    show Lucille Normal 2
     lucille "C’mon all you have to do is sit on the throne."
     lucille "That’s literally the easiest coronation ever."
     mc "You’re right.. I can do this."
     mc "I've been through a lot after all."
     # Grand music
+    hide Lucille
     nr "I slowly make my way to the throne trying my best not to look stupid."
     mc "… "
     mc "Demon Maid?"
     # Serious music
+    show Demon Maid
+    with Dissolve(0.5)
     "Demon Maid" "…"
     lucille "Hey, you’re in the way."
     # Pulls sword
     "Demon Maid" "Sorry milady, but I can’t let you go through with this ceremony."
-    "Demon Maid" "I’ve actually been assigned here by your father to protect the throne from your silly little romance ambitions."
+    "Demon Maid" "I’ve actually been assigned here by your father to protect the throne from your silly romance ambitions."
     lucille "What!? How could you..."
     "Demon Maid" "You are blinded by your affection milady, You were seriously going to give the title of demon king to this pathetic human."
     "Demon Maid" "I can’t allow someone like him to be the demon king."
     mc "You were so nice, but this was how you thought about me…"
+    show Demon Maid Sword
+    with Dissolve(0.5)
     "Demon Maid" "Sorry, but you’ll have to die now."
     "Demon Maid" "You have no place here, just look around you, no one even cares if I slay you."
     mc "…"
@@ -2650,35 +2778,54 @@ label demonWorld_Normal:
     nr "She’s right… They're all just watching.."
     nr "They’re judging my worth as demon king."
     nr "I’ll show them!"
+    play sound 'sounds/PowerUp9.mp3'
+    with flashbulb
     mc "Lower your weapon!"
     # Whoosh
     "Demon Maid" "…"
+    show Demon Maid
     "Demon Maid" "Ahahaha! What the hell are you doing?"
     lucille "It’s useless… "
+    show Demon Maid Sword
+    with Dissolve(0.5)
     "Demon Maid" "This is a magical resistance sword."
     "Demon Maid" "Not even milady can dominate me with royal magic while I’m holding this."
     nr "Dammit, Am I really gonna die again here."
     "Demon Maid" "Goodbye master…."
     # Slash
+    show Lucille Sad
+    with Dissolve(0.5)
+    hide Demon
     lucille "Nooo!!!"
     # Splat
     mc "Eh?"
     nr "Lucille protected me with her body…"
     mc "LUCILLE!!!!!"
+    hide Lucille
+    show Demon Maid 2
+    with Dissolve(0.5)
     "Demon Maid" "What have I done…"
+    hide Demon
+    show Lucille Sad
     lucille "[playerName]... You are…"
     lucille "...my demon king."
     # Fall
+    hide Lucille
     nr "She’s gone…"
     nr "She was the one person who believed in me the most."
+    show Demon Maid 2
     "Demon Maid" "…"
     mc "She died because of you!"
     mc "And because of all you cowards just watching there!"
     mc "I’ll never forgive all of you!!!"
     # Zwish
     # Screen shake
+    play sound 'sounds/PowerUp9.mp3'
+    with flashbulb
     "Demon Maid" "What is this power?"
     # Sword break
+    with flashbulb
+    play sound 'sounds/PowerUp9.mp3'
     mc "All of you should just die!!!!"
     # Whooooosh
     # Fade red
@@ -2693,26 +2840,37 @@ label demonWorld_Bad:
     lucille "I have to say… You mastered royal magic quite quickly."
     mc "It wasn’t much."
     mc "I’m destined to rule after all."
+    show Lucille Normal 2
     lucille "There’s a lot more to being demon king than being a ruler you know."
     mc "I know.."
     nr "These past few days I’ve gained an even greater understanding of royal magic."
     nr "But sometimes it feels like my mind wanders through fog."
     mc "Royal magic’s power is really limitless isn’t it?"
+    show Lucille Normal
     lucille "Yes, it’s power is way above anything else."
     lucille "That’s why we have to set our own limits"
     lucille "Remind ourselves that we are only mortal."
     mc "Why would you want to be mortal though…"
     mc "My life ended before without even being anything special."
     mc "But here, I can be the powerful demon king…"
+    show Lucille Normal 2
+    with Dissolve(0.5)
     lucille "Is being the demon king the only special thing to you in this world?"
     mc "Is there anything else special this world has given me?"
+    show Lucille Normal
+    with Dissolve(0.5)
     lucille "..."
+    show Demon Maid
     "Demon Maid" "Dinner is served."
+    show Lucille Normal 2
+    with Dissolve(0.5)
     lucille "Forget it…"
     # Leave
+    hide Lucille
     "Demon Maid" "Ah! Milady, where are you going?"
     nr "What’s she moping about…"
     nr "Is she hiding something from me?"
+    show Demon Maid
     "Demon Maid" "Did you two fight or something?"
     mc "Hmmmm.."
     nr "I wonder If my royal magic is strong enough to be used on people."
@@ -2741,6 +2899,7 @@ label demonWorld_Bad:
     "Demon Maid" "…"
     # Bedroom
     scene BG_Castle_Bedroom
+    show Lucille Normal
     lucille "Hey…"
     lucille "Sorry for my attitude earlier."
     lucille "It was uncalled for, but you really shouldn't be acting so arrogant."
@@ -2759,7 +2918,9 @@ label demonWorld_Bad:
     nr "You are clearly a burden to me now Lucille."
     mc "C’mon Lucille, I’m all ready to be demon king."
     mc "My royal magic is top notch."
+    show Lucille Pose
     lucille "Being a king requires more than just powerful magic."
+    show Lucille Normal
     lucille "You just aren't ready yet, I feel something is wrong with the way you are now."
     nr "Look like I’ll have to take some desperate measures."
     mc "Believe me, I can do this…"
@@ -2776,15 +2937,18 @@ label demonWorld_Bad:
     # Hallway
     scene BG_Castle_Hall_Day
     mc "Today’s finally the big day huh?"
+    show Demon Maid
     "Demon Maid" "Right this way please."
     nr "At last my time to rule has come."
     # Doors open sound
     # White light
     # Throne Room
     scene BG_Throne_Room
+    show Lucille Normal
     lucille "…"
     mc "Huh?"
     lucille "That’s enough, you can leave now demon maid."
+    show Demon Maid
     "Demon Maid" "Yes, milady…"
     # Door sound
     mc "This place is totally empty."
@@ -2792,11 +2956,13 @@ label demonWorld_Bad:
     lucille "It’s just you and me here [playerName]..."
     mc "Oh I get it!"
     mc "It didn’t work on you did it?"
+    show Lucille Normal 2
     lucille "I am the demon queen after all, you can't dominate me."
     lucille "You're not powerful enough."
     mc "Okay, you got me…"
     mc "What are gonna do now? Why call me over here?"
     mc "Are you going to kill me?"
+    show Lucille Normal
     lucille "No, this wasn’t how it was supposed to turn out."
     lucille "This isn’t you."
     lucille "The royal magic, it’s corrupting your mind."
@@ -2807,6 +2973,7 @@ label demonWorld_Bad:
     lucille "You promised me that you would always be yourself no matter what."
     mc "This is myself Lucille...."
     lucille "No…"
+    show Lucille Pose
     lucille "Return to your senses! "
     # Whoosh
     nr "I feel her magic penetrate my very being."
@@ -2823,8 +2990,10 @@ label demonWorld_Bad:
     # Red flash
     mc "Eh?"
     nr "I’m bleeding…"
+    show Demon Maid Sword
     "Demon Maid" "…"
     "Demon Maid" "Sorry milady, I couldn't leave you alone with this scum."
+    show Lucille Shocked
     lucille "[playerName]!!!"
     # Red tint
     nr "Lucille… even after all that, you would still care for me…"
