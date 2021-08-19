@@ -51,28 +51,6 @@ label start:
 
     ## These display lines of dialogue.
 
-# label intro:
-#     show image "images/MenuItems/MainBG.jpg":
-#         ease 3 zoom 1.2
-#     $ renpy.pause(3,hard=True)
-#     # scene black with Dissolve(5)
-#     # play music "Sounds/08 - South-Facing Window.mp3" loop
-#     n "Makoto-kun… Makoto-kun…"
-#     m "What?"
-#     $ renpy.vibrate(1)
-#     n "Let’s make a promise…"
-
-# label select_world:
-#     nr "A promise huh?..."
-#     nr "I wonder if I can still fulfill a promise after all that happened."
-#     nr "I don’t want to see her cry again."
-#     nr "I want to protect that smile that she was wearing moments ago."
-#     nr "Will I ever see that smile of hers again?"
-#     m "A promise?"
-#     call screen world with dissolve
-#     nr "I’ll just hope that this promise of ours will make us both happy…"
-#     n "Let’s make a promise to each other…"
-#     n "A promise that will be fulfilled when I woke up from this illusionary dream…"
 
 label intro:
     $ renpy.pause(2,hard=True)
