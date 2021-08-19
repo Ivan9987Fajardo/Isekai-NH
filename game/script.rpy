@@ -790,6 +790,13 @@ label adventureWorld:
     lisa "I’m amazed [playerName], You defeated a goblin despite having some unexpected events"
     lisa "You have now completed the basic training for the 4 magic types! Yaaayyyy!"
 
+    if adventureWorld_Choice1 == True:
+        lisa "[playerName], I was thinking.. Are you sure you want to help us defeat the Goblin Lord?"
+        lisa "I’m afraid that maybe my approach towards you makes you feel pressured."
+        lisa "So I will ask you again, Do you really want to help to help us Defeat the goblin Lord?"
+        lisa "Our people needs you... "
+
+
     if adventureWorld_Choice1 == False:
         lisa "You can now start doing quests at the mission board and earn a lot of gold"
         lisa "or you can help us in defeating the goblin lord"
@@ -1216,7 +1223,7 @@ label adventureWorld:
         nr "If I can just rewind the time, I’ll make sure that Lisa will make it out alive"
 
     return
-    
+
 label adventureWorld_Good:
     # *mute*
     # *Flicker Reddish and black color*
@@ -1224,9 +1231,9 @@ label adventureWorld_Good:
     # *screen to black*
     # *blink*
     # *Lisa gone*
-    "Goblin Lord": "What?"
+    "Goblin Lord" "What?"
     # *Hpunch*
-    "Goblin Lord": "What is the meaning of this?"
+    "Goblin Lord" "What is the meaning of this?"
     # *VPunch*
     # *Vpunch*
     lisa "Demon Magic…"
@@ -1235,24 +1242,24 @@ label adventureWorld_Good:
     lisa "I never knew you had such power.. "
     lisa "Please hero, Save us all from the Goblin Lord. You are our only hope. "
     # *insert epic music*
-    "Goblin Lord": "NO! It can't be! I'm the most powerful in this world! "
+    "Goblin Lord" "NO! It can't be! I'm the most powerful in this world! "
     # *GL powerup, Color Violet GL*
-    "Goblin Lord": "Ultra Shockwave! "
+    "Goblin Lord" "Ultra Shockwave! "
     # *Ground shaking*
     mc "Pathetic, Is that all you got? "
     # *snap**shaking stop*
-    "Goblin Lord": "You nullified my magic?? "
+    "Goblin Lord" "You nullified my magic?? "
     mc "Now it's my turn. "
     mc "64 Strikes Demon Claws! "
     # *Claw attacks*
-    "Goblin Lord": "ACKKK! "
-    "Goblin Lord": "How? How can you be this strong? "
-    "Goblin Lord": "I sacrificed a lot to make it to this day.. "
+    "Goblin Lord" "ACKKK! "
+    "Goblin Lord" "How? How can you be this strong? "
+    "Goblin Lord" "I sacrificed a lot to make it to this day.. "
     mc "I'm not strong… I'm just giving you the justice for all the people that you slain. "
     mc "Now, It's time for me to end your miserable life. "
-    "Goblin Lord": "No! It can't be!"
+    "Goblin Lord" "No! It can't be!"
     mc "DEMON EYE! "
-    "Goblin Lord": "STOP! "
+    "Goblin Lord" "STOP! "
     mc "NOW BEGONE! "
     mc "DEMONIC BLINK! "
     # *Blink*
