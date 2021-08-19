@@ -34,7 +34,7 @@ screen main_menu():
         hover "images/buttons/Start_Hover.png"
         #hover_sound "Sounds/hover1.ogg"
         # activate_sound "sounds/PowerUp9.mp3"
-        action (Start('test'),Hide("main_menu"))
+        action (Start('start'),Hide("main_menu"))
 
     imagebutton:
         xpos 860 ypos 303
