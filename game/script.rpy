@@ -102,7 +102,6 @@ label intro:
     $ renpy.pause(2,hard=True)
     scene BG_City_BW with Dissolve(1)
     mc "….."
-    
     mc "Wait what?"
     mc "What’s happening?"
     mc "Where’s everybody??"
