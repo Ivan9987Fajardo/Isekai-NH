@@ -3,6 +3,11 @@
 #######################################
 
 
+#InteractiveDirector
+define director.show_tags = ("Lucille Smile" "Lucille Smug" "Lucille Mad" "Lucille Normal" "Lucille Normal 2" "Demon Maid")
+define director.transitions = [ "Dissolve(0.5)", "Pixellate" ]
+define director.spacing = 0
+
 
 #ClickToContinue
 image ctc_blink:
@@ -10,7 +15,7 @@ image ctc_blink:
        yalign 0.91 xalign 0.86
        linear 0.75 alpha 0.0
        linear 0.75 alpha 1.0
-       repeat 
+       repeat
 
 
 
@@ -19,7 +24,7 @@ image splash = "MenuItems/CompanyScreen.png"
 
 #Main Menu
 image Snow = Snow("images/MenuItems/Snowflake.png")
-    
+
 
 
 
@@ -40,13 +45,23 @@ define gd = Character('Goddess',ctc="ctc_blink",
 
 
 #Background
+image BG_Castle_Bedroom= "images/BG/Castle Bedroom.png"
+image BG_Castle_Bedroom_Day= "images/BG/Castle Bedroom Day.png"
+image BG_Castle_Hall_Day= "images/BG/CastleHall_Day.png"
 image BG_City = "images/BG/City.png"
 image BG_City_BW= im.Sepia("images/BG/City.png")
 image BG_City_Invert= im.MatrixColor("images/BG/City.png", im.matrix.invert())
+image BG_Dining_Room = "images/BG/Dining Room.png"
+image BG_Garden_Day = "images/BG/Garden Day.png"
+image BG_Garden_Day_2 = "images/BG/Garden Day 2.png"
+image BG_Garden_Night_2 = "images/BG/Garden Night 2.png"
+image BG_Library = "images/BG/Library.png"
 image BG_Modern_Room = "images/BG/ModernRoom.png"
 image BG_Sky = "images/BG/Sky.png"
+image BG_Throne_Room = "images/BG/Throne room.png"
 image BG_Forest Day= "images/BG/Forest_Day.png"
 image BG_ForestPath Day= "images/BG/ForestPath_Day.png"
+image CG_Goddess = "images/CG/Goddess.png"
 
 
 image Selection_Forest = im.Scale("images/BG/Forest_Selection.png" , 280, 600)
@@ -93,11 +108,11 @@ image Goblin_Weak:
 #Lisa
 image Lisa Smile:
         "images/Elisabeth/ElisabethPose01-1.png"
-        yalign 3.0
+        yalign 0.5
 
 image Lisa Smile2:
         "images/Elisabeth/ElisabethPose02-1.png"
-        yalign 1.0
+        yalign 0.5
 
 image Lisa Sad:
         "images/Elisabeth/ElisabethPose01-3.png"
@@ -112,13 +127,56 @@ image GuildMaster:
         "images/GuildMaster/Guild Master.png"
         yalign -2.0
 
+#Lucille
+image Lucille Smile:
+        "images/Lucille/LucillePose01-1.png"
+        yalign 0.5
+
+image Lucille Smug:
+        "images/Lucille/LucillePose01-2.png"
+        yalign 0.5
+
+image Lucille Mad:
+        "images/Lucille/LucillePose01-3.png"
+        yalign 0.5
+
+image Lucille Normal:
+        "images/Lucille/LucillePose01-4.png"
+        yalign 0.5
+
+image Lucille Normal 2:
+        "images/Lucille/LucillePose02-1.png"
+        yalign 0.5
+
+image Lucille Happy:
+        "images/Lucille/LucillePose02-2.png"
+        yalign 0.5
+
+image Lucille Embarassed:
+        "images/Lucille/LucillePose02-3.png"
+        yalign 0.5
+
+image Lucille Pose:
+        "images/Lucille/LucillePose03-1.png"
+        yalign 0.5
+
+image Lucille Shocked:
+        "images/Lucille/LucillePose03-2.png"
+        yalign 0.5
+
+#DemonMaid
+image Demon Maid:
+        "images/DemonMaid/DemonMaid-1.png"
+        yalign 0.5
+
+image Demon Maid Sword:
+        "images/DemonMaid/DemonMaid-2.png"
+        yalign 0.5
+
 
 #CG
 
 
 #Music
 define audio.music_refresh = "sounds/Innocent-Years_Looping.mp3"
-define audio.music_heaven = "sounds/Random-Processes_Looping.mp3" 
-
-
-
+define audio.music_heaven = "sounds/Random-Processes_Looping.mp3"

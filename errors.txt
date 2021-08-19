@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 333: expected 'simple_expression' not found.
-    yalign 
-           ^
+File "game/Declarations.rpy", line 146: expected 'comma or end of line' not found.
+    with Dissolve(0.5)
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Jul 26 17:04:59 2020
+Wed Nov 11 01:33:06 2020

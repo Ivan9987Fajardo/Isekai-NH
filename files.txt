@@ -35,19 +35,7 @@ options.rpy
 options.rpyc
 script.rpy
 script.rpyc
-Sounds\City-of-Dread_Looping.mp3
-Sounds\Clank_10.mp3
-Sounds\Clank_6.mp3
-Sounds\Explosion8.mp3
-Sounds\Future-RPG.mp3
-Sounds\Into-Battle.mp3
-Sounds\Lola-Pixel_Looping.mp3
-Sounds\Magical-Discovery.mp3
-Sounds\Monsters-Underground.mp3
-Sounds\PowerUp9.mp3
-Sounds\Quirky33.mp3
-Sounds\Random-Processes_Looping.mp3
-Sounds\Some-Faraway-Place_Looping.mp3
+cache\.gitignore
 cache\bytecode.rpyb
 cache\im-30a40bdb1579fd2e1e37416762c09a44-19a5fce6.png
 cache\im-5d0a76c03c7d2748f69a346f30a2dc41-19a5fce6.png
@@ -112,28 +100,33 @@ gui\slider\vertical_hover_thumb.png
 gui\slider\vertical_idle_bar - Copy.png
 gui\slider\vertical_idle_bar.png
 gui\slider\vertical_idle_thumb.png
-images\Assets\world1.jpg
-images\BG\3496df508ad093c29394b7465661ba24.jpg
-images\BG\4597503c59f5553413149391854d54c7.jpg
-images\BG\808cc39bb2f91b3f53a8b7494b7bc6bb.jpg
-images\BG\BG14b_80.jpg
-images\BG\BG14c_80.jpg
-images\BG\BG15a_80.jpg
-images\BG\BG15b_80.jpg
-images\BG\BG15c_80.jpg
-images\BG\BG26d_80.jpg
-images\BG\Bedroom.png
-images\BG\Hall.jpg
-images\BG\Hospital.jpg
-images\BG\School.jpg
-images\BG\Sky.jpg
-images\BG\Street.jpg
-images\BG\d7572d9366917470a55a165d6215d97c.jpg
-images\BG\d8ffe7f6721a3f6f293f9bbf39463df7.jpg
-images\BG\ocean_b__pixiv.jpg
-images\BG\ocean_c__pixiv.jpg
-images\BG\station_b.jpg
-images\BG\vn_collab_background__rooftop_night_by_raycchan-d8u7bp1.png
+images\BG\Castle Bedroom Day.png
+images\BG\Castle Bedroom.png
+images\BG\CastleHall_Day.png
+images\BG\Castle_Selection.png
+images\BG\City.png
+images\BG\Dining Room.png
+images\BG\ForestPath_Afternoon.png
+images\BG\ForestPath_Day.png
+images\BG\ForestPath_Night.png
+images\BG\Forest_Afternoon.png
+images\BG\Forest_Day.png
+images\BG\Forest_Night.png
+images\BG\Forest_Selection.png
+images\BG\Garden Day 2.png
+images\BG\Garden Day.png
+images\BG\Garden Night 2.png
+images\BG\Garden Night.png
+images\BG\Guild Hall.png
+images\BG\Library.png
+images\BG\ModernRoom.png
+images\BG\Ruins.png
+images\BG\Sky.png
+images\BG\Throne room.png
+images\BG\Town.png
+images\BG\Training Grounds.png
+images\BG\rustic room gabi.png
+images\BG\rustic room morning.png
 images\Buttons\About_Hover.png
 images\Buttons\About_Idle.png
 images\Buttons\All_Hover.png
@@ -157,14 +150,37 @@ images\Buttons\Seen_Idle.png
 images\Buttons\Seen_Selected.png
 images\Buttons\Start_Hover.png
 images\Buttons\Start_Idle.png
+images\CG\Goddess.png
 images\CG\Lizette.jpg
 images\CG\Sleeping_Setsuna.jpg
 images\CG\Sylvie.jpg
-images\Lizette\Heroine.png
-images\Lizette\Lizette_Angry.png
-images\Lizette\Lizette_Confused.png
-images\Lizette\Lizette_Smile.png
-images\Lizette\Lizette_Smile2.png
+images\DemonMaid\DemonMaid-1.png
+images\DemonMaid\DemonMaid-2.png
+images\Elisabeth\ElisabethPose01-1.png
+images\Elisabeth\ElisabethPose01-2.png
+images\Elisabeth\ElisabethPose01-3.png
+images\Elisabeth\ElisabethPose02-1.png
+images\Elisabeth\ElisabethPose02-2.png
+images\Elisabeth\ElisabethPose02-3.png
+images\Elisabeth\ElisabethPose03-1.png
+images\Elisabeth\ElisabethPose03-2.png
+images\Elisabeth\ElisabethPose03-3.png
+images\Goblin\Goblin-2.png
+images\Goblin\Goblin-3.png
+images\Goblin\Goblin.png
+images\Goddess\Goddess.png
+images\Goddess\Goddess2.png
+images\Goddess\Wings.png
+images\GuildMaster\Guild Master.png
+images\Lucille\LucillePose01-1.png
+images\Lucille\LucillePose01-2.png
+images\Lucille\LucillePose01-3.png
+images\Lucille\LucillePose01-4.png
+images\Lucille\LucillePose02-1.png
+images\Lucille\LucillePose02-2.png
+images\Lucille\LucillePose02-3.png
+images\Lucille\LucillePose03-1.png
+images\Lucille\LucillePose03-2.png
 images\MenuItems\BacklogBG.png
 images\MenuItems\CompanyScreen.png
 images\MenuItems\Header.png
@@ -172,7 +188,9 @@ images\MenuItems\LoadBG.png
 images\MenuItems\LoadPage_Ground.png
 images\MenuItems\LoadPage_Hover.png
 images\MenuItems\LoadPage_Idle.png
-images\MenuItems\MainBG.jpg
+images\MenuItems\MainMenu.png
+images\MenuItems\MainMenuV2-Backup.png
+images\MenuItems\MainMenuV2.png
 images\MenuItems\Mainmenu_Frame.png
 images\MenuItems\OptionsBG.png
 images\MenuItems\Quick_Menu_Ground.png
@@ -192,26 +210,37 @@ images\PSD\LoadBG.psd
 images\PSD\LoadPage.psd
 images\PSD\Main Menu.psd
 images\PSD\Main Menu2.psd
+images\PSD\MainMenu.psd
 images\PSD\OptionsBG.psd
 images\PSD\Save.psd
 images\PSD\SaveBG.psd
 images\PSD\Splashscreen.psd
 images\PSD\Untitled-1.psd
 images\PSD\quick.psd
-images\Setsuna\FS1-angry1.png
-images\Setsuna\FS1-smile1.png
-images\Setsuna\FS1-smile3.png
-images\Setsuna\FS1-wink3.png
+saves\1-1-LT1.save
+saves\4-1-LT1.save
 saves\_reload-2-LT1.save
-saves\auto-1-LT1.save
 saves\auto-10-LT1.save
-saves\auto-2-LT1.save
 saves\auto-3-LT1.save
-saves\auto-4-LT1.save
 saves\auto-5-LT1.save
-saves\auto-6-LT1.save
 saves\auto-7-LT1.save
-saves\auto-8-LT1.save
 saves\auto-9-LT1.save
 saves\navigation.json
 saves\persistent
+sounds\City-of-Dread_Looping.mp3
+sounds\Clank_10.mp3
+sounds\Clank_6.mp3
+sounds\Crash.mp3
+sounds\Explosion8.mp3
+sounds\Fun-Times_Looping.mp3
+sounds\Future-RPG.mp3
+sounds\Horn.mp3
+sounds\Innocent-Years_Looping.mp3
+sounds\Into-Battle.mp3
+sounds\Lola-Pixel_Looping.mp3
+sounds\Magical-Discovery.mp3
+sounds\Monsters-Underground.mp3
+sounds\PowerUp9.mp3
+sounds\Quirky33.mp3
+sounds\Random-Processes_Looping.mp3
+sounds\Some-Faraway-Place_Looping.mp3
