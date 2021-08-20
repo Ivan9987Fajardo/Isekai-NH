@@ -1480,11 +1480,14 @@ label demonWorld:
     show Lucille Smile with Dissolve(0.5)
     lucille "Oh.. perfect we’re here."
     lucille "Observe."
-    show Lucille Pose with Dissolve(0.5)
+    show Lucille Power
+    with Dissolve(0.5)
     lucille "Open!"
     # Whoosh
     play sound "sounds/PowerUp9.mp3"
     nr "The doors in front of us suddenly open like an automatic door."
+    show Lucille Pose
+    with Dissolve(0.5)
     nr "This kinda reminds me of mall doors."
     show Lucille Happy with Dissolve(0.5)
     lucille "Well? Amazing right?"
