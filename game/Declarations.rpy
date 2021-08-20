@@ -4,19 +4,20 @@
 
 
 #InteractiveDirector
-define director.show_tags = ("Lucille Smile" "Lucille Smug" "Lucille Mad" "Lucille Normal" "Lucille Normal 2" "Demon Maid")
+define director.show_tags = ("Lucille Smile" "Lucille Smug" "Lucille Mad" "Lucille Normal" "Lucille Normal 2" "Demon Maid" "Lucille Power")
 define director.transitions = [ "Dissolve(0.5)", "Pixellate" ]
 define director.spacing = 0
 
 
 #Effects
 define flashbulb = Fade(0.2, 0.0, 0.8, color='#fff')
-
+define circleirisout = ImageDissolve("imagedissolve circleiris.png", 1.0, 8)
+define circleirisin = ImageDissolve("imagedissolve circleiris.png", 1.0, 8 , reverse=True)
 
 
 #InteractiveDirector
 define director.show_tags = ("Lucille" "Demon" "Lisa" "GuildMaster")
-define director.transitions = [ "Dissolve(0.5)", "Pixellate", "flashbulb", "vpunch" ]
+define director.transitions = [ "Dissolve(0.5)", "Pixellate", "flashbulb", "vpunch", "Dissolve(1.0)", "fade", "circleirisin", "circleirisout" ]
 define director.spacing = 0
 
 
@@ -46,7 +47,7 @@ define mc = Character('[playerName]',ctc="ctc_blink",
 define lisa = Character('Elisabeth',ctc="ctc_blink",
         ctc_position="fixed")
 define lisa2 = Character('Elisabeth',ctc="ctc_blink",
-        ctc_position="fixed", who_color="#ff4d94")        
+        ctc_position="fixed", who_color="#ff4d94")
 define lucille = Character('Lucille',ctc="ctc_blink",
         ctc_position="fixed")
 define n = Character('???',ctc="ctc_blink",
@@ -190,53 +191,24 @@ image Lucille Normal:
         "images/Lucille/LucillePose01-4.png"
         yalign 0.5
 
-image Lucille Normal 2:
-        "images/Lucille/LucillePose02-1.png"
-        yalign 0.5
-
-image Lucille Happy:
-        "images/Lucille/LucillePose02-2.png"
-        yalign 0.5
-
-image Lucille Embarassed:
-        "images/Lucille/LucillePose02-3.png"
-        yalign 0.5
-
-image Lucille Pose:
-        "images/Lucille/LucillePose03-1.png"
-        yalign 0.5
-
-image Lucille Shocked:
-        "images/Lucille/LucillePose03-2.png"
-        yalign 0.5
-
-
-image Lucille Normal 2:
-        "images/Lucille/LucillePose02-1.png"
-        yalign 0.5
-
-image Lucille Happy:
-        "images/Lucille/LucillePose02-2.png"
-        yalign 0.5
-
-image Lucille Embarassed:
-        "images/Lucille/LucillePose02-3.png"
-        yalign 0.5
-
-image Lucille Pose:
-        "images/Lucille/LucillePose03-1.png"
-        yalign 0.5
-
-image Lucille Shocked:
-        "images/Lucille/LucillePose03-2.png"
-        yalign 0.5
-
 image Lucille HappyBlush:
         "images/Lucille/LucillePose01-5.png"
         yalign 0.5
 
 image Lucille Angry:
         "images/Lucille/LucillePose01-6.png"
+        yalign 0.5
+
+image Lucille Normal 2:
+        "images/Lucille/LucillePose02-1.png"
+        yalign 0.5
+
+image Lucille Happy:
+        "images/Lucille/LucillePose02-2.png"
+        yalign 0.5
+
+image Lucille Embarassed:
+        "images/Lucille/LucillePose02-3.png"
         yalign 0.5
 
 image Lucille MadBlush:
@@ -246,6 +218,19 @@ image Lucille MadBlush:
 image Lucille Sad:
         "images/Lucille/LucillePose02-5.png"
         yalign 0.5
+
+image Lucille Pose:
+        "images/Lucille/LucillePose03-1.png"
+        yalign 0.5
+
+image Lucille Shocked:
+        "images/Lucille/LucillePose03-2.png"
+        yalign 0.5
+
+image Lucille Power:
+        "images/Lucille/LucillePose03-3.png"
+        yalign 0.5
+
 
 #DemonMaid
 image Demon Maid:
