@@ -61,7 +61,7 @@ define config.has_voice = False
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "sounds/月のしらべPatricia.mp3"
+define config.main_menu_music = "sounds/月のゆくえ- ノラと皇女と野良猫ハート Original Sound Track.mp3"
 
 ## Transitions #################################################################
 ##
