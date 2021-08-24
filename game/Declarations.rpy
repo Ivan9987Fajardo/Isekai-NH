@@ -48,8 +48,8 @@ define lisa = Character('Elisabeth',ctc="ctc_blink",
         ctc_position="fixed")
 define lisa2 = Character('Elisabeth',ctc="ctc_blink",
         ctc_position="fixed", who_color="#ff4d94")
-define lucille = Character('Lucille',ctc="ctc_blink",
-        ctc_position="fixed")
+define lucille = Character('Lucille', color="E34FE7", ctc="ctc_blink",
+        ctc_position="fixed", who_outlines=[ (1, "#FF00FF") ], what_outlines=[ (1, "#FF00FF") ])
 define n = Character('???',ctc="ctc_blink",
         ctc_position="fixed")
 define nr = Character(None,ctc="ctc_blink",

@@ -1280,7 +1280,7 @@ label adventureWorld_Good:
     lisa "What is it? Go ahead Mc. "
     mc "Uhmm, I know this is a bit embarrassing but… "
     mc "Can you be mine? And I'll be yours.."
-    # *Expression to shy* 
+    # *Expression to shy*
     # *Expression to shy*
     lisa "Mc, Is this--? "
     # *expression to smile*
@@ -1414,10 +1414,11 @@ label demonWorld:
     lucille "I used the royal summoning spell  to summon a soul worthy of being the demon king. ."
     mc "Demon King? Me?"
     mc "Hell yeah I’m the demon king!"
-    show Lucille Normal 2 with Dissolve(0.5)
+    show Lucille Mad with Dissolve(0.5)
     lucille "Not yet you are!"
     lucille "Don’t act so conceited mongrel, you are still far from being worthy of the title demon king."
     lucille "I can sense your weakness you know."
+    show Lucille Normal
     nr "I guess I’m not much of a great person here like in my world."
     mc "You wouldn’t replace me with another by doing another summon ritual would you?"
     lucille "Unfortunately I can only perform the sacred ritual once."
@@ -1427,6 +1428,7 @@ label demonWorld:
     lucille "You will learn to be a proper demon and earn the right to be demon king."
     lucille "Until then you shall be following my every instruction."
     lucille "Would you accept the responsibility?"
+    show Lucille Normal 2 with Dissolve(0.5)
     lucille "Or would you prefer for me to send you back to the realm of the dead?"
     nr "Honestly, becoming the demon king… that actually sounds like a lot of fun."
     mc "Fine.. I’ll become the demon king. It’s not like I have anything else to do."
@@ -1434,9 +1436,10 @@ label demonWorld:
     lucille "Okay then, from now you are on the path of becoming demon king."
     lucille "I shall be your partner on this endeavor."
     mc "Pleasure to be working with you."
+    show Lucille Normal 2 with Dissolve(0.5)
     lucille "Yes but umm..."
     lucille "Please restrain yourself a bit around me first."
-    show Lucille HappyBlush
+    show Lucille HappyBlush with Dissolve(0.5)
     lucille "I’m still quite inexperienced."
     mc "Huh? Okay..."
     nr "What does she mean restrain myself?"
