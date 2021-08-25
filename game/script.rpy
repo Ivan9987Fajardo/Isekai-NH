@@ -36,7 +36,7 @@ label splashscreen:
     return
 
 label start:
-    show image "images/MenuItems/MainMenuV2.png":
+    show image "images/MenuItems/MainMenuV3.png":
         ease 2 zoom 1.2
     stop music fadeout 2.0
 
@@ -59,7 +59,7 @@ label intro:
     play music music_refresh
     scene BG_Modern_Room with dissolve
     mc "Morning already??"
-    mc "Do I have classes today? or is it a weekend? "
+    mc "Did I have classes today? or is it a weekend? "
     nr "Ohh, I have morning classes…"
     mc "Darn… I did nothing on both weekends"
     mc "I hope we don’t have a pop quiz, I didn’t study the whole weekend"
@@ -173,8 +173,8 @@ label intro:
         xalign 0.9 yalign 0.5
     gd "Sooo, That’s all. Any questions?"
     mc "Hmm.. If I die again in those worlds, will I have a new set of worlds to choose from?"
-    gd "Nope. You will go straight to heaven… I think?"
-    gd "So, What world do you want to go to?"
+    gd "Nope. You'll go straight to the afterlife… I think?"
+    gd "So, Which world do you want to go to?"
     call screen world with dissolve
     # -WORLD CHOICE-
     gd "You have chosen {i}{b}[world] World{/b}{/i}, What name do you want to use in this world?"
@@ -1380,6 +1380,12 @@ label adventureWorld_Bad:
 label demonWorld:
     # Black Screen
     # Fade to background
+    scene black
+    with fade
+    mc "Aghh.."
+    scene white
+    with circleirisout
+    mc "So bright..."
     scene BG_Garden_Day
     with fade
     play music 'sounds/In the sunlight through the trees.mp3'
@@ -1402,16 +1408,26 @@ label demonWorld:
     mc "Sorry for being a weak human I guess."
     show Lucille Normal with Dissolve(0.5)
     lucille "Well whatever, I can probably work with this."
+    show Lucille Pose
+    with Dissolve(0.5)
     lucille "State thy name human."
+    show Lucille Normal
+    with Dissolve(0.5)
     mc "Oh.. I’m [playerName] "
     mc "By the way what's going on?"
     mc "Why am I in some weird circle on the floor?"
     show Lucille Pose with Dissolve(0.5)
     lucille "Welcome to the Demon World."
+    show Lucille Normal 2
+    with Dissolve(0.5)
     lucille "I am the Demon Queen Lucille and I have summoned you from the realm of the dead to serve in my kingdom."
     mc "Serve you? Wait does that mean I was summoned as a demon’s slave."
+    show Lucille Smug
+    with Dissolve(0.5)
     lucille "As much as I’d like for you to be a slave your summoning ritual was actually somewhat special."
     lucille "I used the royal summoning spell  to summon a soul worthy of being the demon king. ."
+    show Lucille Normal
+    with Dissolve(0.5)
     mc "Demon King? Me?"
     mc "Hell yeah I’m the demon king!"
     show Lucille Mad with Dissolve(0.5)
@@ -1419,14 +1435,23 @@ label demonWorld:
     lucille "Don’t act so conceited mongrel, you are still far from being worthy of the title demon king."
     lucille "I can sense your weakness you know."
     show Lucille Normal
+    with Dissolve(0.5)
     nr "I guess I’m not much of a great person here like in my world."
     mc "You wouldn’t replace me with another by doing another summon ritual would you?"
+    show Lucille Mad
+    with Dissolve(0.5)
     lucille "Unfortunately I can only perform the sacred ritual once."
     lucille "So I guess I’ll have to make do with you."
+    show Lucille Normal
+    with Dissolve(0.5)
     mc "What am I supposed to do here then?"
     show Lucille Pose with Dissolve(0.5)
     lucille "You will learn to be a proper demon and earn the right to be demon king."
+    show Lucille Normal 2
+    with Dissolve(0.5)
     lucille "Until then you shall be following my every instruction."
+    show Lucille Pose
+    with Dissolve(0.5)
     lucille "Would you accept the responsibility?"
     show Lucille Normal 2 with Dissolve(0.5)
     lucille "Or would you prefer for me to send you back to the realm of the dead?"
@@ -1434,6 +1459,8 @@ label demonWorld:
     mc "Fine.. I’ll become the demon king. It’s not like I have anything else to do."
     show Lucille Smile with Dissolve(0.5)
     lucille "Okay then, from now you are on the path of becoming demon king."
+    show Lucille Happy
+    with Dissolve(0.5)
     lucille "I shall be your partner on this endeavor."
     mc "Pleasure to be working with you."
     show Lucille Normal 2 with Dissolve(0.5)
@@ -1451,6 +1478,8 @@ label demonWorld:
     show Lucille Normal with Dissolve(0.5)
     lucille "Stay close to me, you don’t want to get lost in these halls"
     mc "Um… Miss Lucille…"
+    show Lucille Smile
+    with Dissolve(0.5)
     lucille "You needn’t use honorifics when addressing me."
     show Lucille Happy with Dissolve(0.5)
     lucille "I grant you permission to just call me Lucille."
