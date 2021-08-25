@@ -1396,11 +1396,11 @@ label demonWorld:
     show Lucille Normal with Dissolve(0.5)
     lucille "…."
     mc "…."
-    nr "It’s a cute demon girl."
+    nr "It’s the demon girl."
     mc "Um.. hello there…"
     show Lucille Angry
     with Dissolve(0.5)
-    lucille "Th-This is the future demon king?"
+    lucille "Th-This is the one I summoned?"
     show Lucille Mad with Dissolve(0.5)
     lucille "How could I have summoned such a weak looking mongrel."
     lucille "A human nonetheless."
@@ -1420,7 +1420,7 @@ label demonWorld:
     lucille "Welcome to the Demon World."
     show Lucille Normal 2
     with Dissolve(0.5)
-    lucille "I am the Demon Queen Lucille and I have summoned you from the realm of the dead to serve in my kingdom."
+    lucille "I am the Demon Queen Lucille and I have summoned you from your realm to serve in my kingdom."
     mc "Serve you? Wait does that mean I was summoned as a demon’s slave."
     show Lucille Smug
     with Dissolve(0.5)
@@ -1454,7 +1454,7 @@ label demonWorld:
     lucille "Well for starters, you shall learn how to be a proper demon."
     show Lucille Normal 2
     with Dissolve(0.5)
-    lucille "Until then you shall be following my every instruction."
+    lucille "Until then you'll be following my every instruction."
     show Lucille Pose
     with Dissolve(0.5)
     lucille "Would you accept the responsibility?"
@@ -1474,25 +1474,19 @@ label demonWorld:
     show Lucille Normal 2 with Dissolve(0.5)
     mc "Nah! I'm good!"
     show Lucille Smile with Dissolve(0.5)
-    lucille "Okay then, from now you are on the path of becoming demon king."
+    lucille "Okay then. Once again, welcome to the Demon World."
     show Lucille Happy
     with Dissolve(0.5)
     lucille "I shall be your partner on this endeavor."
     mc "Pleasure to be working with you."
     show Lucille Normal 2 with Dissolve(0.5)
-    lucille "Yes but umm..."
-    lucille "Please restrain yourself a bit around me first."
-    show Lucille HappyBlush with Dissolve(0.5)
-    lucille "I’m still quite inexperienced."
-    mc "Huh? Okay..."
-    nr "What does she mean restrain myself?"
     # Hallway
     scene BG_Castle_Hall_Day
     with fade
     play music 'sounds/Mysterious aura.mp3'
     nr "She brings inside the castle to a fancy looking hallway."
     show Lucille Normal with Dissolve(0.5)
-    lucille "Stay close to me, you don’t want to get lost in these halls"
+    lucille "Stay close to me, you don’t want to get lost."
     mc "Um… Miss Lucille…"
     show Lucille Smile
     with Dissolve(0.5)
@@ -1511,7 +1505,7 @@ label demonWorld:
     mc "Would I at least be able to learn magic or something."
     show Lucille Smile with Dissolve(0.5)
     lucille "Of course you would."
-    lucille "As future demon king you have access to use royal magic."
+    lucille "As my familiar you have access to use royal magic."
     mc "Royal magic… You mean like the magic you used to summon me?"
     mc "What kind of magic is that?"
     show Lucille Normal with Dissolve(0.5)
@@ -1543,21 +1537,15 @@ label demonWorld:
     nr "I can tell she wants me to be impressed by that, guess I’ll pretend."
     mc "Wow! That was amazing, your magic is awesome!"
     lucille "No, that was just easy, especially for someone like me."
-    mc "I never would have thought someone so small could do that."
+    mc "I never would have thought someone so cute could do that."
     show Lucille Embarassed with Dissolve(0.5)
     lucille "Wha!?"
     # Angry
     show Lucille Mad with Dissolve(0.5)
-    lucille "You mongrel! How dare you call me small!"
-    lucille "Thou shall inflict harm upon himself!"
-    mc "Excuse me?"
-    nr "Then suddenly my fist came crashing down on my face."
-    # Punch
-    mc "Ouchie!"
-    mc "I’m guessing that was royal magic."
+    lucille "You mongrel! How dare you call me cute!"
     show Lucille Normal 2 with Dissolve(0.5)
     lucille "Do not treat me lightly! I am still the queen of this kingdom."
-    nr "Oops.. she must not like being called small."
+    nr "Oops.. she must not like being called cute."
     mc "Sorry bout that, won’t happen again."
     show Lucille Normal with Dissolve(0.5)
     lucille "Whatever.. "
