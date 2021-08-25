@@ -1424,19 +1424,24 @@ label demonWorld:
     mc "Serve you? Wait does that mean I was summoned as a demon’s slave."
     show Lucille Smug
     with Dissolve(0.5)
-    lucille "As much as I’d like for you to be a slave your summoning ritual was actually somewhat special."
-    lucille "I used the royal summoning spell  to summon a soul worthy of being the demon king. ."
+    lucille "Not really a slave, more like a familiar"
+    lucille "I used the royal summoning spell  to summon a soul worthy serving me. ."
     show Lucille Normal
     with Dissolve(0.5)
-    mc "Demon King? Me?"
-    mc "Hell yeah I’m the demon king!"
-    show Lucille Mad with Dissolve(0.5)
-    lucille "Not yet you are!"
-    lucille "Don’t act so conceited mongrel, you are still far from being worthy of the title demon king."
-    lucille "I can sense your weakness you know."
-    show Lucille Normal
+    nr "So I'm the demon queen's familiar?"
+    mc "..."
+    mc "Order me whatever you would like my queen!"
+    show Lucille Smug
     with Dissolve(0.5)
-    nr "I guess I’m not much of a great person here like in my world."
+    lucille "Hooh, Got a knack for servitude I see"
+    mc "It shall be my life's duty to serve you, I am but a humble sevant."
+    show Lucille Embarassed
+    with Dissolve(0.5)
+    lucille "Hey! I did not summon you to be that submissive."
+    lucille "Cease this at once!"
+    mc "Mmm'kay"
+    lucille "Grrr.. How dare you mess with me."
+    lucille "Maybe I summoned the wrong servant after all."
     mc "You wouldn’t replace me with another by doing another summon ritual would you?"
     show Lucille Mad
     with Dissolve(0.5)
@@ -1446,7 +1451,7 @@ label demonWorld:
     with Dissolve(0.5)
     mc "What am I supposed to do here then?"
     show Lucille Pose with Dissolve(0.5)
-    lucille "You will learn to be a proper demon and earn the right to be demon king."
+    lucille "Well for starters, you shall learn how to be a proper demon."
     show Lucille Normal 2
     with Dissolve(0.5)
     lucille "Until then you shall be following my every instruction."
@@ -1454,9 +1459,20 @@ label demonWorld:
     with Dissolve(0.5)
     lucille "Would you accept the responsibility?"
     show Lucille Normal 2 with Dissolve(0.5)
-    lucille "Or would you prefer for me to send you back to the realm of the dead?"
-    nr "Honestly, becoming the demon king… that actually sounds like a lot of fun."
-    mc "Fine.. I’ll become the demon king. It’s not like I have anything else to do."
+    lucille "Or would you prefer for me to send you back to the realm you came from?"
+    nr "She can send me back where I came from?"
+    mc "By send me back to where I came from do you mean.."
+    lucille "It means I will send you back to the exact time and place I summoned you from."
+    mc "..."
+    scene BG_City_BW with Dissolve(1)
+    mc "!?"
+    play sound "sounds/Crash.mp3"
+    scene BG_City_BW with sshake
+    nr "*Crash!*"
+    scene red with Dissolve(1)
+    scene BG_Garden_Day
+    show Lucille Normal 2 with Dissolve(0.5)
+    mc "Nah! I'm good!"
     show Lucille Smile with Dissolve(0.5)
     lucille "Okay then, from now you are on the path of becoming demon king."
     show Lucille Happy
@@ -2470,7 +2486,8 @@ label demonWorld:
         with Dissolve(0.5)
         lucille "Don’t thank me yet we’re just getting started."
         mc "Right."
-    with fade
+    scene black
+    with Dissolve(0.5)
     nr "We kept on training royal magic for the following days."
     scene BG_Garden_Night_2
     with Dissolve(0.5)
@@ -2696,9 +2713,9 @@ label demonWorld_Good:
     hide Lucille
     "Demon Maid" "Sorry milady, but I can’t let you go through with this ceremony."
     "Demon Maid" "I’ve actually been assigned here by your father to protect the throne from your silly romance endeavors."
+    hide Demon
     show Lucille Normal 2
     with Dissolve(0.5)
-    hide Demon
     lucille "What!? How could you..."
     hide Lucille
     show Demon Maid
