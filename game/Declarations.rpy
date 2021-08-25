@@ -44,8 +44,8 @@ image Snow = Snow("images/MenuItems/Snowflake.png")
 #In Game
 define mc = Character('[playerName]',ctc="ctc_blink",
         ctc_position="fixed")
-define lisa = Character('Elisabeth',ctc="ctc_blink",
-        ctc_position="fixed")
+define lisa = Character('Elisabeth', color="#00FFAE", ctc="ctc_blink",
+        ctc_position="fixed", who_outlines=[ (1, "#00FFCD") ], what_outlines=[ (1, "#00FFCD") ])
 define lisa2 = Character('Elisabeth',ctc="ctc_blink",
         ctc_position="fixed", who_color="#ff4d94")
 define lucille = Character('Lucille', color="E34FE7", ctc="ctc_blink",
@@ -80,6 +80,8 @@ image BG_ForestPath Night= "images/BG/ForestPath_Night.png"
 image BG_Rustic_Room Day = "images/BG/rustic room morning.png"
 image BG_Rustic_Room Night = "images/BG/rustic room gabi.png"
 image BG_Training = "images/BG/Training Grounds.png"
+image CG_Lucille01 = "images/CG/LucilleCG01.png"
+image CG_Lucille02 = "images/CG/LucilleCG02.png"
 
 
 image Selection_Forest = im.Scale("images/BG/Forest_Selection.png" , 280, 600)

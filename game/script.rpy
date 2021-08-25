@@ -1415,7 +1415,7 @@ label demonWorld:
     with Dissolve(0.5)
     mc "Oh.. I’m [playerName] "
     mc "By the way what's going on?"
-    mc "Why am I in some weird circle on the floor?"
+    mc "How did I get here?"
     show Lucille Pose with Dissolve(0.5)
     lucille "Welcome to the Demon World."
     show Lucille Normal 2
@@ -1795,79 +1795,72 @@ label demonWorld:
     show Lucille Embarassed
     with Dissolve(0.5)
     lucille "Hey!? Don't try that hard."
-    # Library Afternoon
-    with fade
+    scene black
+    with Dissolve(0.5)
     play music 'sounds/Mysterious aura.mp3'
     mc "Ughh.. This is never gonna end."
-    show Lucille Smile
-    with Dissolve(0.5)
+    scene CG_Lucille01
+    with fade
     lucille "…"
     nr "Lucille seems to have been reading some books herself for the past few hours."
     lucille "Mhmm.."
     nr "Her books seem way more fun than mine."
     mc "Hey, Lucille whatcha readin’."
     mc "Are you reading fiction or something?"
-    show Lucille Smile
+    scene CG_Lucille02
     with Dissolve(0.5)
     lucille "Well yes, one would call it that."
     mc "Can we trade? Mine’s boring."
-    show Lucille Mad
+    scene CG_Lucille01
     with Dissolve(0.5)
     lucille "No."
     mc "Why’s that, lemme see that."
-    show Lucille Normal
-    with Dissolve(0.5)
     lucille "Oh!? Hey."
     nr "I grabbed the one of the books she had and checked the title."
     mc "“My Demon Romantic Comedy is Going Perfectly Well, As I Expected of the Great Me Vol. 3” "
     mc "What the hell is this??"
     nr "It’s like one of those romcom light novels with a really long title."
-    show Lucille Smile
+    scene CG_Lucille02
     with Dissolve(0.5)
     lucille "That’s DemoRoma."
     lucille "It’s only one of the most popular series here in the demon world."
     mc "You don’t say. "
-    show Lucille Happy
-    with Dissolve(0.5)
     lucille "You can read that if you’re interested."
-    show Lucille Smile
-    with Dissolve(0.5)
     lucille "I guess you could take a break from your studies for now. "
     lucille "That is actually one of my favorite series."
     mc "Really? What are some other series you like?"
-    show Lucille Normal 2
+    scene CG_Lucille01
     with Dissolve(0.5)
     lucille "Mmmm… it’s hard to say, there are alot of novel series I like."
     lucille "There’s “A Specific Mystical Demon Indicant”."
     lucille "“That Time I Was Summoned As a Demon Goblin” was also pretty cool."
     nr "Sorry Lucille, but I don’t think the authors here are very original."
     mc "You sure know a lot of series Lucille."
-    show Lucille Smile
+    scene CG_Lucille02
     with Dissolve(0.5)
     lucille "Probably because I have a lot of free time here. It’s not like there’s much to do.."
     mc "Aren’t you kept busy by taking care of the demon community?"
-    show Lucille Smug
-    with Dissolve(0.5)
     lucille "As I said before, we demons are a proud and noble race."
-    show Lucille Smile
+    scene CG_Lucille01
+    with Dissolve(0.5)
     lucille "The people are well behaved, there’s really not much problems to take care of in this country."
     nr "That’s not fantasy like at all, usually there’d be wars or something."
     mc "Don’t you have any looming threats in this world though?"
     mc "Like an evil demon king that’s plotting to rule the worl---"
     mc "Nevermind."
-    show Lucille Happy
+    scene CG_Lucille02
     with Dissolve(0.5)
     lucille "Oh! Do you desire world conquest?"
     lucille "You can do as you wish once you are demon king, I will not object."
-    show Lucille Smile
-    with Dissolve(0.5)
     lucille "I would even support you If that is what you truly want to do."
     mc "I’m not so sure about doing something that crazy."
     mc "What about you Lucille? What do you wanna do?"
-    show Lucille Normal
+    scene CG_Lucille01
     with Dissolve(0.5)
     lucille "Me!?"
     lucille "Well… I do love reading romance novels."
+    scene BG_Library
+    with Dissolve(0.5)
     show Lucille Smile
     with Dissolve(0.5)
     lucille "I was thinking maybe I could write one as well."
