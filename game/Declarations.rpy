@@ -43,19 +43,19 @@ image Snow = Snow("images/MenuItems/Snowflake.png")
 
 #In Game
 define mc = Character('[playerName]',ctc="ctc_blink",
-        ctc_position="fixed")
+        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "080808") ])
 define lisa = Character('Elisabeth', color="#00FFAE", ctc="ctc_blink",
-        ctc_position="fixed", who_outlines=[ (1, "#00FFCD") ], what_outlines=[ (1, "#00FFCD") ])
+        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "#00FFCD") ])
 define lisa2 = Character('Elisabeth',ctc="ctc_blink",
         ctc_position="fixed", who_color="#ff4d94")
 define lucille = Character('Lucille', color="E34FE7", ctc="ctc_blink",
-        ctc_position="fixed", who_outlines=[ (1, "#FF00FF") ], what_outlines=[ (1, "#FF00FF") ])
+        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "#FF00FF") ])
 define n = Character('???',ctc="ctc_blink",
         ctc_position="fixed")
 define nr = Character(None,ctc="ctc_blink",
         ctc_position="fixed")
-define gd = Character('Goddess',ctc="ctc_blink",
-        ctc_position="fixed")
+define gd = Character('Goddess', color="FFE94B", ctc="ctc_blink",
+        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "FFE94B") ])
 
 
 #Background
