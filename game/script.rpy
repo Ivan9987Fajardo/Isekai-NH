@@ -1402,9 +1402,8 @@ label demonWorld:
     with Dissolve(0.5)
     lucille "Th-This is the one I summoned?"
     show Lucille Mad with Dissolve(0.5)
-    lucille "How could I have summoned such a weak looking mongrel."
-    lucille "A human nonetheless."
-    nr "Wow she looks really disappointed."
+    lucille "A human?"
+    nr "She looks really disappointed."
     mc "Sorry for being a weak human I guess."
     show Lucille Normal with Dissolve(0.5)
     lucille "Well whatever, I can probably work with this."
@@ -1424,8 +1423,8 @@ label demonWorld:
     mc "Serve you? Wait does that mean I was summoned as a demon’s slave."
     show Lucille Smug
     with Dissolve(0.5)
-    lucille "Not really a slave, more like a familiar"
-    lucille "I used the royal summoning spell  to summon a soul worthy serving me. ."
+    lucille "Not really a slave, more like a familiar."
+    lucille "I used the royal summoning spell  to summon a soul worthy serving me."
     show Lucille Normal
     with Dissolve(0.5)
     nr "So I'm the demon queen's familiar?"
@@ -1509,15 +1508,7 @@ label demonWorld:
     mc "Royal magic… You mean like the magic you used to summon me?"
     mc "What kind of magic is that?"
     show Lucille Normal with Dissolve(0.5)
-    lucille "Royal Magic in a way is like domination in the form of magic."
-    lucille "Using royal magic one can bend the rules of mind and matter by dominating and commanding them."
-    mc "Wait.. how does magic like that summon me to this world?"
-    show Lucille Smug with Dissolve(0.5)
-    lucille "That was the highest level of royal magic."
-    lucille "I merely commanded the force controlling your soul to bring you to me."
-    nr "So in a way she kind of commanded the goddess to bring me here."
-    show Lucille Normal with Dissolve(0.5)
-    lucille "Usually royal magic is mostly used to command lower level demons and open magically sealed mechanisms."
+    lucille "It's the kind of magic granted to only the most noble of demons."
     nr "Just as she was saying that we arrive and stop at a closed door."
     show Lucille Smile with Dissolve(0.5)
     lucille "Oh.. perfect we’re here."
