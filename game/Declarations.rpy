@@ -247,6 +247,9 @@ image Demon Maid Sword:
         "images/DemonMaid/DemonMaid-2.png"
         yalign 0.5
 
+image Demon Maid Sword B:
+        "images/DemonMaid/DemonMaid-2-2.png"
+        yalign 0.5
 
 #CG
 image CG_Goddess = "images/CG/Goddess.png"

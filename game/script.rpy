@@ -2933,8 +2933,10 @@ label demonWorld_Normal:
     with flashbulb
     mc "Lower your weapon!"
     # Whoosh
+    show Demon Maid 2
+    with Dissolve(0.5)
     "Demon Maid" "…"
-    show Demon Maid
+    show Demon Maid Sword
     with Dissolve(0.5)
     "Demon Maid" "Ahahaha! What the hell are you doing?"
     lucille "It’s useless… "
@@ -2950,12 +2952,12 @@ label demonWorld_Normal:
     hide Demon
     lucille "Nooo!!!"
     # Splat
-    play sound 'sounds/Crash.mp3'
+    play sound 'sounds/Cut04-1.mp3'
     mc "Eh?"
     nr "Lucille protected me with her body…"
     mc "LUCILLE!!!!!"
     hide Lucille
-    show Demon Maid 2
+    show Demon Maid Sword B
     with Dissolve(0.5)
     "Demon Maid" "What have I done…"
     hide Demon
@@ -2972,6 +2974,8 @@ label demonWorld_Normal:
     with Dissolve(0.5)
     "Demon Maid" "…"
     mc "She died because of you!"
+    show Demon Maid Sword B
+    with Dissolve(0.5)
     mc "And because of all you cowards just watching there!"
     mc "I’ll never forgive all of you!!!"
     # Zwish
