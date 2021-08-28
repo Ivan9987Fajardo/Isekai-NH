@@ -1536,7 +1536,7 @@ label demonWorld:
     lucille "You mongrel! How dare you call me cute!"
     show Lucille Normal 2 with Dissolve(0.5)
     lucille "Do not treat me lightly! I am still the queen of this kingdom."
-    nr "Oops.. she must not like being called cute."
+    nr "Oops.. she must not like being teased."
     mc "Sorry bout that, won’t happen again."
     show Lucille Normal with Dissolve(0.5)
     lucille "Whatever.. "
@@ -1572,55 +1572,18 @@ label demonWorld:
     play audio 'sounds/Scream_Female01-1.mp3'
     play music 'sounds/In the sunlight through the trees.mp3'
     mc "Gyaaah!"
-    mc "What the frick was that!"
+    mc "What the hell was that!"
     show Lucille Smile with Dissolve(0.5)
     lucille "Oh.. did you not have roostergons in your previous world."
     lucille "They crow during mornings to start the day."
     mc "I’m pretty sure that was more roaring than crowing."
     mc "…"
-    mc "Wait a minute… were you just sleeping in the same bed as me?"
+    mc "Wait a minute… what are you doing here so early?"
     show Lucille Normal
     with Dissolve(0.5)
-    lucille "Well of course, this is my bed after all."
-    mc "This is your room?"
-    show Lucille Normal
-    with Dissolve(0.5)
-    lucille "Yes."
-    mc "Why did you make me stay here?"
-    show Lucille MadBlush
-    with Dissolve(0.5)
-    lucille "Well.. you are my future spouse after all."
-    show Lucille HappyBlush
-    with Dissolve(0.5)
-    lucille "We might as well get used to it."
-    mc "Future spouse? Me?"
-    show Lucille Normal
-    with Dissolve(0.5)
-    lucille "You are the future demon king are you not?"
-    mc "Now that you mention it… "
-    mc "The demon king and queen would be married right?"
-    show Lucille Smile
-    with Dissolve(0.5)
-    lucille "Yes, exactly!"
-    mc "Wait hold on! I’m not so sure about this yet."
-    show Lucille Angry
-    with Dissolve(0.5)
-    lucille "What do you mean you're not sure?"
-    show Lucille Normal 2
-    with Dissolve(0.5)
-    lucille "You said you would become the demon king right, did your determination then mean so little."
-    mc "I didn’t realize being demon king entailed that."
-    mc "I just got reincarnated, I don’t think I'm ready for that kind of lifelong commitment."
-    show Lucille Normal
-    with Dissolve(0.5)
-    lucille "What!?"
-    show Lucille Mad
-    with Dissolve(0.5)
-    lucille "Are you saying you won’t take responsibility for me?"
-    show Lucille Embarassed
-    with Dissolve(0.5)
-    lucille "Do you dislike me that much?"
-    # nr "I don’t dislike her but..."
+    lucille "Well... you are my familiar after all."
+    lucille "It's not like I was excited to see you or anything."
+    
 
     menu:
         "I don’t dislike her but..."
@@ -1688,7 +1651,7 @@ label demonWorld:
     "Demon Maid" "Now you won’t be alone anymore."
     show Lucille Normal 2
     lucille "Hey!"
-    mc "Did you need a demon king king that badly?"
+    mc "Did you need a familiar king that badly?"
     "Demon Maid" "Demon king? Milady just wanted to summon her soulma---"
     show Lucille Mad
     with Dissolve(0.5)
@@ -1965,7 +1928,7 @@ label demonWorld:
     nr "If I wanted to go on an adventure I would've just picked the adventure world."
     show Demon Maid at left
     with Dissolve(0.5)
-    "Demon Maid" "Dinner is served."
+    "Demon Maid" "Feeding time!."
     hide Demon
     with Dissolve(0.5)
     mc "Oh! That looks appetizing."
@@ -1975,7 +1938,7 @@ label demonWorld:
     show Lucille Normal 2
     with Dissolve(0.5)
     lucille "Hey, mind your manners here on the dining table."
-    mc "By the way what kind of meat is this?"
+    mc "By the way, what kind of meat is this?"
     mc "Are we eating dragon meat or something?"
     show Lucille Normal
     with Dissolve(0.5)
@@ -2187,10 +2150,10 @@ label demonWorld:
     show Lucille Smug
     with Dissolve(0.5)
     lucille "Sorry, But only a noble demon crowned with the highest title such as me may sit on the throne."
-    mc "Wouldn't our titles be basically the same when I become demon king?"
+    mc "Exclusively for the demon queen then?"
     show Lucille Smile
     with Dissolve(0.5)
-    lucille "Oh… Good point, I never thought about that."
+    lucille "Who know's, Maybe one day you'll be worthy of the throne too."
     lucille "Maybe we should add one more throne here for the future."
     mc "Are throne rooms even supposed to have two thrones?"
     show Lucille Normal 2
@@ -2198,7 +2161,7 @@ label demonWorld:
     lucille "Probably not, but it’s not like I have to follow some rule."
     show Lucille Happy
     with Dissolve(0.5)
-    lucille "I’m the queen after all, rules shall bend to my will."
+    lucille "I’m the queen after all, I am the rules."
     mc "If you say so."
     mc "What are you even supposed to do in a throne room anyway?"
     show Lucille Normal
@@ -2209,10 +2172,10 @@ label demonWorld:
     mc "What a waste of a beautiful throne to be unused though."
     show Lucille Smile
     with Dissolve(0.5)
-    lucille "Sometimes I like to just sit on it and strike a confident pose."
+    lucille "Sometimes I like to just sit on it and relax."
     mc "Really?"
     lucille "I don’t know why exactly but it feels pretty empowering."
-    nr "A small demon on a throne would be so cute."
+    nr "Somehow the image of Lucille on the throne seems cute."
     nr "I would love to see her just sitting there all smug."
     mc "You should try it now."
     show Lucille Mad
@@ -2234,9 +2197,22 @@ label demonWorld:
     play music 'sounds/Mysterious aura.mp3'
     show Demon Maid
     with Dissolve(0.5)
-    "Demon Maid" "Dinner is served."
+    "Demon Maid" "Time to eat!!."
+    show Lucille Normal
+    lucille "Can't you at least say something more classy."
+    lucille "Maybe say 'dinner is served' or 'Bon Appetit' instead?"
+    "Demon Maid" "Don't wanna."
+    show Lucille Mad
+    lucille "So insubordinate."
     hide Demon
     with Dissolve(0.5)
+    mc "Did you just say 'Bon Appetit'?"
+    mc "You guys have french here?"
+    lucille "French? Do you mean Demofrench?"
+    mc "That's just the same word with 'demon' at the beginning!"
+    lucille "I have no idea what you're talking about."
+    lucille "Let's just eat already."
+    mc "Okay.."
     nr "I’ve been fed meals here countless times already."
     nr "I kinda feel like I’m freeloading."
     show Lucille Normal 2
@@ -2244,7 +2220,7 @@ label demonWorld:
     lucille "What's wrong? You look worried about something?"
     mc "I just thought it’s pretty weird of me to suddenly come live here and eat for free."
     lucille "You've been here for a few weeks already, why let that bother you now?"
-    lucille "You are the future demon king after all."
+    lucille "You are my familiar after all."
     mc "Yeah, you’re right."
     mc "It’s just that the meals here are always so delicious."
     show Lucille Normal
