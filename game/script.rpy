@@ -1564,12 +1564,13 @@ label demonWorld:
     with circleirisin
     nr "I fall asleep almost immediately as I lay into the soft bed more comfortable than any bed I’ve used back in my past world."
     # Fade to black
-    lucille "Good night my demon king..."
+    lucille "Good night my familiar..."
     # Sleep tone music
     # Roaaar
+    play audio 'sounds/Scream_Female01-1.mp3'
+    nr "*Screeech*"
     scene BG_Castle_Bedroom_Day
     with circleirisout
-    play audio 'sounds/Scream_Female01-1.mp3'
     play music 'sounds/In the sunlight through the trees.mp3'
     mc "Gyaaah!"
     mc "What the hell was that!"
@@ -1583,7 +1584,7 @@ label demonWorld:
     with Dissolve(0.5)
     lucille "Well... you are my familiar after all."
     lucille "It's not like I was excited to see you or anything."
-    
+
 
     menu:
         "I don’t dislike her but..."
