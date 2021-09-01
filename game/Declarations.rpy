@@ -4,19 +4,20 @@
 
 
 #InteractiveDirector
-define director.show_tags = ("Lucille Smile" "Lucille Smug" "Lucille Mad" "Lucille Normal" "Lucille Normal 2" "Demon Maid")
+define director.show_tags = ("Lucille Smile" "Lucille Smug" "Lucille Mad" "Lucille Normal" "Lucille Normal 2" "Demon Maid" "Lucille Power")
 define director.transitions = [ "Dissolve(0.5)", "Pixellate" ]
 define director.spacing = 0
 
 
 #Effects
 define flashbulb = Fade(0.2, 0.0, 0.8, color='#fff')
-
+define circleirisout = ImageDissolve("imagedissolve circleiris.png", 1.0, 8)
+define circleirisin = ImageDissolve("imagedissolve circleiris.png", 1.0, 8 , reverse=True)
 
 
 #InteractiveDirector
 define director.show_tags = ("Lucille" "Demon" "Lisa" "GuildMaster")
-define director.transitions = [ "Dissolve(0.5)", "Pixellate", "flashbulb", "vpunch" ]
+define director.transitions = [ "Dissolve(0.5)", "Pixellate", "flashbulb", "vpunch", "Dissolve(1.0)", "fade", "circleirisin", "circleirisout" ]
 define director.spacing = 0
 
 
@@ -42,19 +43,19 @@ image Snow = Snow("images/MenuItems/Snowflake.png")
 
 #In Game
 define mc = Character('[playerName]',ctc="ctc_blink",
-        ctc_position="fixed")
-define lisa = Character('Elisabeth',ctc="ctc_blink",
-        ctc_position="fixed")
+        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "080808") ])
+define lisa = Character('Elisabeth', color="#00FFAE", ctc="ctc_blink",
+        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "#00FFCD") ])
 define lisa2 = Character('Elisabeth',ctc="ctc_blink",
-        ctc_position="fixed", who_color="#ff4d94")        
-define lucille = Character('Lucille',ctc="ctc_blink",
-        ctc_position="fixed")
+        ctc_position="fixed", who_color="#ff4d94")
+define lucille = Character('Lucille', color="E34FE7", ctc="ctc_blink",
+        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "#FF00FF") ])
 define n = Character('???',ctc="ctc_blink",
         ctc_position="fixed")
 define nr = Character(None,ctc="ctc_blink",
         ctc_position="fixed")
-define gd = Character('Goddess',ctc="ctc_blink",
-        ctc_position="fixed")
+define gd = Character('Goddess', color="FFE94B", ctc="ctc_blink",
+        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "FFE94B") ])
 
 
 #Background
@@ -79,6 +80,8 @@ image BG_ForestPath Night= "images/BG/ForestPath_Night.png"
 image BG_Rustic_Room Day = "images/BG/rustic room morning.png"
 image BG_Rustic_Room Night = "images/BG/rustic room gabi.png"
 image BG_Training = "images/BG/Training Grounds.png"
+image CG_Lucille01 = "images/CG/LucilleCG01.png"
+image CG_Lucille02 = "images/CG/LucilleCG02.png"
 
 
 image Selection_Forest = im.Scale("images/BG/Forest_Selection.png" , 280, 600)
@@ -190,53 +193,24 @@ image Lucille Normal:
         "images/Lucille/LucillePose01-4.png"
         yalign 0.5
 
-image Lucille Normal 2:
-        "images/Lucille/LucillePose02-1.png"
-        yalign 0.5
-
-image Lucille Happy:
-        "images/Lucille/LucillePose02-2.png"
-        yalign 0.5
-
-image Lucille Embarassed:
-        "images/Lucille/LucillePose02-3.png"
-        yalign 0.5
-
-image Lucille Pose:
-        "images/Lucille/LucillePose03-1.png"
-        yalign 0.5
-
-image Lucille Shocked:
-        "images/Lucille/LucillePose03-2.png"
-        yalign 0.5
-
-
-image Lucille Normal 2:
-        "images/Lucille/LucillePose02-1.png"
-        yalign 0.5
-
-image Lucille Happy:
-        "images/Lucille/LucillePose02-2.png"
-        yalign 0.5
-
-image Lucille Embarassed:
-        "images/Lucille/LucillePose02-3.png"
-        yalign 0.5
-
-image Lucille Pose:
-        "images/Lucille/LucillePose03-1.png"
-        yalign 0.5
-
-image Lucille Shocked:
-        "images/Lucille/LucillePose03-2.png"
-        yalign 0.5
-
 image Lucille HappyBlush:
         "images/Lucille/LucillePose01-5.png"
         yalign 0.5
 
 image Lucille Angry:
         "images/Lucille/LucillePose01-6.png"
+        yalign 0.5
+
+image Lucille Normal 2:
+        "images/Lucille/LucillePose02-1.png"
+        yalign 0.5
+
+image Lucille Happy:
+        "images/Lucille/LucillePose02-2.png"
+        yalign 0.5
+
+image Lucille Embarassed:
+        "images/Lucille/LucillePose02-3.png"
         yalign 0.5
 
 image Lucille MadBlush:
@@ -246,6 +220,19 @@ image Lucille MadBlush:
 image Lucille Sad:
         "images/Lucille/LucillePose02-5.png"
         yalign 0.5
+
+image Lucille Pose:
+        "images/Lucille/LucillePose03-1.png"
+        yalign 0.5
+
+image Lucille Shocked:
+        "images/Lucille/LucillePose03-2.png"
+        yalign 0.5
+
+image Lucille Power:
+        "images/Lucille/LucillePose03-3.png"
+        yalign 0.5
+
 
 #DemonMaid
 image Demon Maid:
@@ -260,6 +247,9 @@ image Demon Maid Sword:
         "images/DemonMaid/DemonMaid-2.png"
         yalign 0.5
 
+image Demon Maid Sword B:
+        "images/DemonMaid/DemonMaid-2-2.png"
+        yalign 0.5
 
 #CG
 image CG_Goddess = "images/CG/Goddess.png"

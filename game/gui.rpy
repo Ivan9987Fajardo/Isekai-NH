@@ -86,7 +86,7 @@ define gui.title_text_size = 50
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "images/MenuItems/MainMenuV2.png"
+define gui.main_menu_background = "images/MenuItems/MainMenuV3.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
 ## Should we show the name and version of the game?
@@ -396,5 +396,3 @@ define gui.nvl_thought_xalign = 0.0
 ## The position of nvl menu_buttons.
 define gui.nvl_button_xpos = 450
 define gui.nvl_button_xalign = 0.0
-
-

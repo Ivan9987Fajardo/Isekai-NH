@@ -61,7 +61,7 @@ define config.has_voice = False
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "sounds/Future-RPG.mp3"
+define config.main_menu_music = "sounds/月のゆくえ- ノラと皇女と野良猫ハート Original Sound Track.mp3"
 
 ## Transitions #################################################################
 ##
@@ -169,7 +169,7 @@ init python:
     ## For example, "*.txt" matches txt files in the base directory,
     ## "game/**.ogg" matches ogg files in the game directory or any of its
     ## subdirectories, and "**.psd" matches psd files anywhere in the project.
-    
+
     ##Music Main##
     # style.button.activate_sound = "sounds/Quirky33.mp3"
     # style.hotspot.activate_sound = "sounds/Quirky33.mp3"
@@ -177,7 +177,7 @@ init python:
     # style.imagebutton.activate_sound = "sounds/Quirky33.mp3"
     #Text Style#
     style.default.drop_shadow = [(0, 0)] #Adds a shadow one pixel to the right and one pixel down
-    
+
     ## Classify files as None to exclude them from the built distributions.
 
     build.classify('**~', None)
