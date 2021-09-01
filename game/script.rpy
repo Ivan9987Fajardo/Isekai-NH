@@ -817,11 +817,21 @@ label adventureWorld:
             "Defeat the Goblin Lord and free the people":
                 $ normal_end = True
 
+
     if adventureWorld_Choice1 == False and normal_end == True:
         lisa "Really? You’ll help us now defeat the Goblin Lord?"
         mc "Yeah, I realized that maybe that goddess gave me this power to help the people in this world."
         nr "I don’t need to be selfish. This is the right thing to do."
         lisa "Thank you very much [playerName]! I owe you a lot."
+    
+    if adventureWorld_Choice1 == True:
+        menu:
+            "What do I need to do?"
+            "Defeat the Goblin Lord and free the people":
+                $ normal_end = True
+        lisa "Really? Thank you so much [playerName]"
+        lisa "I owe you a lot!"
+
 
     lisa "Now let’s head back to the guild and have some rest.."
     lisa "We still have a lot of training to do tomorrow so have enough rest okay?"
@@ -1169,6 +1179,16 @@ label adventureWorld:
     lisa "I’m glad I fought alongside you MC…"
     lisa "Thank you"
     mc "NOOOO!"
+
+    if adventureWorld_Choice1 == False and normal_end == True:
+        menu:
+                "I love you Lisa":
+    
+    if adventureWorld_Choice1 == True and normal_end == True:
+        menu:
+                "???":
+                    jump adventureWorld_Good
+            
 
     if adventureWorld_Choice1 == False and normal_end == True:
         lisa "I lov--"
