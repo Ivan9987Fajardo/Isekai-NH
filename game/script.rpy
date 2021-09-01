@@ -243,8 +243,8 @@ label adventureWorld:
     lisa "Old gen are beings who originally lived in this world."
     mc "So you’re an old gen or a new gen? I’m [playerName] by the way."
     lisa "I originally lived in this world so you can categorize me as  an old gen."
-    show Lisa Smile with Dissolve(0.5)
-    # show Lisa Smile3 with Dissolve(0.5)
+    # show Lisa Smile with Dissolve(0.5)
+    show Lisa Smile3 with Dissolve(0.5)
     lisa "I’m Elisabeth from the Elf clan, but you can call me Lisa."
     nr "So I’m a new gen and I have magic powers??"
     mc "Okay Lisa, Can you explain to me this magic thing?"
@@ -678,7 +678,7 @@ label adventureWorld:
     # *Show Dark Void
     mc "There’s a 4 second delay in casting Dark Void.."
     nr "It feels like there’s something that’s blocking the magic to pass through."
-    show Lisa Smile1 with Dissolve(0.5)
+    show Lisa Smile with Dissolve(0.5)
     lisa "Well, It’s just your 2nd day of training. 2 seconds casting delay is the fastest that you can do."
     lisa "So now, Let’s start your training!"
     mc "Yeah, sure!"

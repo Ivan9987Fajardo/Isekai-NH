@@ -109,41 +109,37 @@ image Lisa Smile2:
         "images/Elisabeth/ElisabethPose02-1.png"
         yalign 0.5
 
-image Lisa Shy1:
-        "images/Elisabeth/ElisabethPose01-2.png"
-        ypos 1.08
-
-image Lisa Shy2:
-        "images/Elisabeth/ElisabethPose02-3.png"
-        ypos 1.08
-
-image Lisa Normal:
-        "images/Elisabeth/ElisabethPose01-4.png"
-        ypos 1.08
-
-image Lisa Smile2:
-        "images/Elisabeth/ElisabethPose02-1.png"
-        ypos 1.08
-
 image Lisa Smile3:
         "images/Elisabeth/ElisabethPose03-1.png"
-        ypos 1.08
+        yalign 0.5
 
 image Lisa Smile4:
         "images/Elisabeth/ElisabethPose03-3.png"
-        ypos 1.08
+        yalign 0.5
+
+image Lisa Shy1:
+        "images/Elisabeth/ElisabethPose01-2.png"
+        yalign 0.5
+
+image Lisa Shy2:
+        "images/Elisabeth/ElisabethPose02-3.png"
+        yalign 0.5
+
+image Lisa Normal:
+        "images/Elisabeth/ElisabethPose01-4.png"
+        yalign 0.5
 
 image Lisa Sad:
         "images/Elisabeth/ElisabethPose01-3.png"
-        ypos 1.13
+        yalign 0.5
 
 image Lisa Smirk:
         "images/Elisabeth/ElisabethPose02-2.png"
-        ypos 1.08
+        yalign 0.5
 
 image Lisa Angry:
         "images/Elisabeth/ElisabethPose03-2.png"
-        ypos 1.08
+        yalign 0.5
 
 #Guild master
 image GuildMaster:
