@@ -19,13 +19,13 @@ init:
 screen world:
     imagebutton:
         xalign 0.9 yalign 0.5
-        idle im.Scale("images/BG/Forest_Selection.png" , 280, 600)
-        hover im.Scale("images/BG/Forest_Selection.png" , 310, 640)
+        idle im.Scale("images/BG/Forest_Selection.png" , 350, 600)
+        hover im.Scale("images/BG/Forest_Selection.png" , 400, 640)
         action (SetVariable("world", "Adventure"),Return())
     imagebutton:
         xalign 0.1 yalign 0.5
-        idle im.Scale("images/BG/Castle_Selection.png" , 280, 600)
-        hover im.Scale("images/BG/Castle_Selection.png" , 350, 640)
+        idle im.Scale("images/BG/Castle_Selection.png" , 350, 600)
+        hover im.Scale("images/BG/Castle_Selection.png" , 400, 640)
         action (SetVariable("world", "Demon"),Return())
 ## The game starts here.
 label splashscreen:
@@ -107,24 +107,15 @@ label intro:
     scene BG_Sky with dissolve
     show Snow
     play music music_heaven
-    # hide Snow with dissolve
     mc "What?"
-
-    # Screen left right (Look around)
-    scene CG_Goddess:
-        # show Snow
-        ease 1.0 zoom 1.5
-        pause(0.5)
-        ease 1.0 zoom 1.0
-        pause(0.5)
-        ease 1.0 xalign 0.8 yalign 0.2 zoom 1.5
-        pause(0.5)
-        ease 1.0 zoom 1.0
-    show Snow
     mc "Where am I?"
     nr "Those are the kind of questions that are going through my head.."
 
     gd "Heyyyyy!"
+     # Screen left right (Look around)
+    hide Snow with dissolve
+    scene CG_Goddess with dissolve
+    show Snow with dissolve
     mc "Who are you?!"
     mc "What the hell happened to me??"
     gd "You had a horrible death.. So Saaaad"
@@ -197,6 +188,8 @@ label intro:
         jump adventureWorld
 
 label adventureWorld:
+    $ adventureWorld_Good = 0
+    $ adventureWorld_Bad = 0
     scene black with fade
     scene BG_Forest Day
     show Snow
@@ -250,8 +243,8 @@ label adventureWorld:
     lisa "Old gen are beings who originally lived in this world."
     mc "So you’re an old gen or a new gen? I’m [playerName] by the way."
     lisa "I originally lived in this world so you can categorize me as  an old gen."
-
-    show Lisa Smile3 with Dissolve(0.5)
+    show Lisa Smile with Dissolve(0.5)
+    # show Lisa Smile3 with Dissolve(0.5)
     lisa "I’m Elisabeth from the Elf clan, but you can call me Lisa."
     nr "So I’m a new gen and I have magic powers??"
     mc "Okay Lisa, Can you explain to me this magic thing?"
@@ -419,11 +412,11 @@ label adventureWorld:
     menu:
         "What will I do?"
         "I’ll be the one who will protect you and everyone":
-            $ adventureWorld_Choice1 = True
+            $ adventureWorld_Good = adventureWorld_Good + 1
         "I don’t think I am capable of carrying that responsibility":
-            $ adventureWorld_Choice1 = False
+            $ adventureWorld_Bad = adventureWorld_Bad + 1
 
-    if adventureWorld_Choice1 == True:
+    if adventureWorld_Good > adventureWorld_Bad:
         mc "I’ll be the one who will protect you and everyone"
         mc "Even though it is kinda scary, I know that you and everyone else will always be in my back right?"
         nr "Maybe this is my destiny after all. That goddess gave me this power to help everyone else."
@@ -435,7 +428,7 @@ label adventureWorld:
         lisa "I hope you don’t regret your decision. So prepare yourself!"
         mc "I’ll never regret this.. "
         nr "I hope so…"
-    elif adventureWorld_Choice1 == False:
+    elif adventureWorld_Good < adventureWorld_Bad:
         mc "I don’t think I am capable of carrying that responsibility"
         mc "I still can’t imagine myself killing the Goblin Lord.."
         mc "I still need to learn a lot to have the courage of carrying that kind of task"
@@ -499,7 +492,7 @@ label adventureWorld:
     lisa "But I’ll do my best to support you in practicing the different types"
     mc "Thank you. So how can I use dark magic?"
     show Lisa Normal with Dissolve(0.5)
-    lisa "Hmm. The asic type of dark magic is the void."
+    lisa "Hmm. The basic type of dark magic is the void."
     lisa "It’s like creating a small black hole in your palms that sucks everything"
     lisa "Open your hands, and imagine holding a mini black hole."
     # *close eyes*
@@ -543,7 +536,7 @@ label adventureWorld:
     lisa "Thank you. Let’s go back to the guild hall?"
     mc "Let’s go!"
     scene black with Dissolve(0.5)
-    if adventureWorld_Choice1 == True:
+    if adventureWorld_Good > adventureWorld_Bad:
         # *dining hall*
         scene BG_Dining_Room with Dissolve(0.5)
         show Lisa Smile2 with Dissolve(0.5)
@@ -611,7 +604,7 @@ label adventureWorld:
         mc "Okay! Good Night Lisa!"
         nr "I really am a lucky guy…"
         # *Fade to black*
-    if adventureWorld_Choice1 == False:
+    if adventureWorld_Good < adventureWorld_Bad:
         # *room*
         scene BG_Rustic_Room Night with Dissolve(0.5)
         nr "Do I really deserve this kind of training?"
@@ -649,11 +642,11 @@ label adventureWorld:
     show Lisa Smile2 with Dissolve(0.5)
     lisa "Anyways, Just eat your breakfast and meet me in the training ground okay?"
 
-    if adventureWorld_Choice1 == True:
+    if adventureWorld_Good > adventureWorld_Bad:
         mc "How about you? Wanna have breakfast with me?"
         lisa "I would love to, but I already ate earlier. I’ll take that offer on another day okay?"
         lisa "Your treat!"
-    if adventureWorld_Choice1 == False:
+    if adventureWorld_Good < adventureWorld_Bad:
         mc "Okay! I’ll be done in a bit."
 
     # *Fade to black*
@@ -790,14 +783,14 @@ label adventureWorld:
     lisa "I’m amazed [playerName], You defeated a goblin despite having some unexpected events"
     lisa "You have now completed the basic training for the 4 magic types! Yaaayyyy!"
 
-    if adventureWorld_Choice1 == True:
+    if adventureWorld_Good > adventureWorld_Bad:
         lisa "[playerName], I was thinking.. Are you sure you want to help us defeat the Goblin Lord?"
         lisa "I’m afraid that maybe my approach towards you makes you feel pressured."
         lisa "So I will ask you again, Do you really want to help to help us Defeat the goblin Lord?"
         lisa "Our people needs you... "
 
 
-    if adventureWorld_Choice1 == False:
+    if adventureWorld_Good < adventureWorld_Bad:
         lisa "You can now start doing quests at the mission board and earn a lot of gold"
         lisa "or you can help us in defeating the goblin lord"
         lisa "With your talent and power, Defeating the goblin lord will definitely be possible."
@@ -812,23 +805,23 @@ label adventureWorld:
         menu:
             "What do I need to do?"
             "I just want to enjoy my life and do some quests":
-                $ normal_end = False
+                $ adventureWorld_Bad = adventureWorld_Bad + 1
                 jump adventureWorld_Bad
             "Defeat the Goblin Lord and free the people":
-                $ normal_end = True
+                $ adventureWorld_Good = adventureWorld_Good + 1
 
 
-    if adventureWorld_Choice1 == False and normal_end == True:
+    if adventureWorld_Good == adventureWorld_Bad:
         lisa "Really? You’ll help us now defeat the Goblin Lord?"
         mc "Yeah, I realized that maybe that goddess gave me this power to help the people in this world."
         nr "I don’t need to be selfish. This is the right thing to do."
         lisa "Thank you very much [playerName]! I owe you a lot."
     
-    if adventureWorld_Choice1 == True:
+    if adventureWorld_Good > adventureWorld_Bad:
         menu:
             "What do I need to do?"
             "Defeat the Goblin Lord and free the people":
-                $ normal_end = True
+                $ adventureWorld_Good = adventureWorld_Good + 1
         lisa "Really? Thank you so much [playerName]"
         lisa "I owe you a lot!"
 
@@ -837,12 +830,12 @@ label adventureWorld:
     lisa "We still have a lot of training to do tomorrow so have enough rest okay?"
     mc "Okay, You too Lisa! Thanks for today!"
     # *screen to rooml*
-    if adventureWorld_Choice1 == False and normal_end == True:
+    if adventureWorld_Good == adventureWorld_Bad:
         nr "That was the right thing to do right? To help and save this world from the goblins"
         nr "I need to do this not just for the people, also for myself."
         nr "Thank you Lisa, for making me realize my worth in this world."
         # *sleep*
-    if adventureWorld_Choice1 == True:
+    if adventureWorld_Good > adventureWorld_Bad:
         nr "What is this thing that I’m feeling?"
         nr "My chest tightens whenever Lisa is near me.. I don’t understand.."
         # *Lisa flash back*
@@ -948,14 +941,14 @@ label adventureWorld:
     nr "My mind is full of questions right now…"
     nr "Well, I do think of her a lot this past few days.."
 
-    if adventureWorld_Choice1 == False and normal_end == True:
+    if adventureWorld_Good == adventureWorld_Bad:
         mc "I’ll better clear this up tomorrow.."
         mc "I don’t deserve any kind of these feelings.."
         mc "Not Yet. Not until we defeated that Goblin Lord."
         # *Sleep*
-    if adventureWorld_Choice1 == True:
+    if adventureWorld_Good > adventureWorld_Bad:
         mc "Am I…?"
-        mc "In love with LiSA?"
+        mc "In love with Lisa?"
         nr "No, No, No… This can’t be.."
         nr "She only sees me as a friend.. Right?"
         # *flash back*
@@ -1180,69 +1173,72 @@ label adventureWorld:
     lisa "Thank you"
     mc "NOOOO!"
 
-    if adventureWorld_Choice1 == False and normal_end == True:
+    if adventureWorld_Good == adventureWorld_Bad:
         menu:
                 "I love you Lisa":
+                    jump adventureWorld_normal
     
-    if adventureWorld_Choice1 == True and normal_end == True:
+    if adventureWorld_Good > adventureWorld_Bad:
         menu:
                 "???":
                     jump adventureWorld_Good
+                "I love you Lisa":
+                    jump adventureWorld_normal
             
 
-    if adventureWorld_Choice1 == False and normal_end == True:
-        lisa "I lov--"
-        # *SLASH*
-        # *red screen*
-        mc "Lisa? Lisa?"
-        "Goblin Lord" "Your Lisa is Dead! HAHAHAHA"
-        mc "Dead?"
-        # *Flash back Lisa Faces*
-        mc "NOOOO!!!!"
-        # *FLashing Negative screen*
-        # *turn into demon*
-        nr "Lisa.."
-        nr "Lisa…"
-        "Goblin Lord" "What the??"
-        "Goblin Lord" "A-A Demon!"
-        mc "You will pay for what you’ve done…"
-        mc "I’ll show you what hell looks like"
-        mc "Hell’s Fire!"
-        "Goblin Lord" "YOU CANNOT DEFEAT ME! AAAAAAHHHHH"
-        # *Blibk*
-        "Goblin Lord" "Wha-? Where did he go?"
-        # *Vpunch*
-        # *cpunch*
-        "Goblin Lord" "Ughhh! Where are you??"
-        # *Hpunch*
-        # &Hopunch*
-        # *Hpunch*
-        "Goblin Lord" "STOP!"
-        # *Slash*
-        # *slash*
-        mc "Any last words?"
-        "Goblin Lord" "All of you people in this world are trash!"
-        "Goblin Lord" "You don’t deserve to live in my kingdom!"
-        "Goblin Lord" "You must be --"
-        # *black slash*
-        # *Demonic slash*
-        "Goblin Lord" "Farewell."
-        "Goblin Lord" "You had the choice to become a leader, but you chose to die."
+label adventureWorld_normal:    
+    lisa "I lov--"
+    # *SLASH*
+    # *red screen*
+    mc "Lisa? Lisa?"
+    "Goblin Lord" "Your Lisa is Dead! HAHAHAHA"
+    mc "Dead?"
+    # *Flash back Lisa Faces*
+    mc "NOOOO!!!!"
+    # *FLashing Negative screen*
+    # *turn into demon*
+    nr "Lisa.."
+    nr "Lisa…"
+    "Goblin Lord" "What the??"
+    "Goblin Lord" "A-A Demon!"
+    mc "You will pay for what you’ve done…"
+    mc "I’ll show you what hell looks like"
+    mc "Hell’s Fire!"
+    "Goblin Lord" "YOU CANNOT DEFEAT ME! AAAAAAHHHHH"
+    # *Blibk*
+    "Goblin Lord" "Wha-? Where did he go?"
+    # *Vpunch*
+    # *cpunch*
+    "Goblin Lord" "Ughhh! Where are you??"
+    # *Hpunch*
+    # &Hopunch*
+    # *Hpunch*
+    "Goblin Lord" "STOP!"
+    # *Slash*
+    # *slash*
+    mc "Any last words?"
+    "Goblin Lord" "All of you people in this world are trash!"
+    "Goblin Lord" "You don’t deserve to live in my kingdom!"
+    "Goblin Lord" "You must be --"
+    # *black slash*
+    # *Demonic slash*
+    "Goblin Lord" "Farewell."
+    "Goblin Lord" "You had the choice to become a leader, but you chose to die."
 
 
-        "Goblin Lord" "I hope this makes you happy Lisa…"
-        "Goblin Lord" "I still have a lot of things to say to you.."
-        "Goblin Lord" "But that will be for the next timeline I guess.."
-        "Goblin Lord" "I’m sorry I failed to protect you.."
-        "Goblin Lord" "Please come back.."
-        # *fade to black*
+    "Goblin Lord" "I hope this makes you happy Lisa…"
+    "Goblin Lord" "I still have a lot of things to say to you.."
+    "Goblin Lord" "But that will be for the next timeline I guess.."
+    "Goblin Lord" "I’m sorry I failed to protect you.."
+    "Goblin Lord" "Please come back.."
+    # *fade to black*
 
-        # *Screen to forest*
-        nr "I did save this world from the reign of the evil Goblin"
-        nr "I had a lot of training adventures with Lisa"
-        nr "If I can just rewind the time, I’ll make sure that Lisa will make it out alive"
-
+    # *Screen to forest*
+    nr "I did save this world from the reign of the evil Goblin"
+    nr "I had a lot of training adventures with Lisa"
+    nr "If I can just rewind the time, I’ll make sure that Lisa will make it out alive"
     return
+
 
 label adventureWorld_Good:
     # *mute*
@@ -1257,7 +1253,7 @@ label adventureWorld_Good:
     # *VPunch*
     # *Vpunch*
     lisa "Demon Magic…"
-    lisa "Boosts one’s physical and magical abilities by 300%"
+    lisa "Boosts one’s physical and magical abilities by 300%%"
     lisa "This magic has been long lost for a long time…"
     lisa "I never knew you had such power.. "
     lisa "Please hero, Save us all from the Goblin Lord. You are our only hope. "
@@ -1290,7 +1286,7 @@ label adventureWorld_Good:
     # *Scene to black*
     # *1 week after*
     nr "It's been a week since I defeated the Goblin Lord.. "
-    lisa "The're are no more shortage in the food supplies for the people. "
+    lisa "There are no more shortage in the food supplies for the people. "
     lisa "It's all because of you Mc "
     lisa "Thank you for giving us back our freedom. "
     mc "I can't do all of it by myself. It's all thanks to you for always being by my side Lisa. "

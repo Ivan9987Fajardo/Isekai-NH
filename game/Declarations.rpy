@@ -43,19 +43,19 @@ image Snow = Snow("images/MenuItems/Snowflake.png")
 
 #In Game
 define mc = Character('[playerName]',ctc="ctc_blink",
-        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "080808") ])
+        ctc_position="fixed", who_outlines=[ (0.8, "080808") ], what_outlines=[ (0.8, "080808") ])
 define lisa = Character('Elisabeth', color="#00FFAE", ctc="ctc_blink",
-        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "#00FFCD") ])
+        ctc_position="fixed", who_outlines=[ (0.8, "080808") ], what_outlines=[ (0.8, "#00FFCD") ])
 define lisa2 = Character('Elisabeth',ctc="ctc_blink",
         ctc_position="fixed", who_color="#ff4d94")
 define lucille = Character('Lucille', color="E34FE7", ctc="ctc_blink",
-        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "#FF00FF") ])
+        ctc_position="fixed", who_outlines=[ (0.8, "080808") ], what_outlines=[ (0.8, "#FF00FF") ])
 define n = Character('???',ctc="ctc_blink",
         ctc_position="fixed")
 define nr = Character(None,ctc="ctc_blink",
         ctc_position="fixed")
 define gd = Character('Goddess', color="FFE94B", ctc="ctc_blink",
-        ctc_position="fixed", who_outlines=[ (1, "080808") ], what_outlines=[ (1, "FFE94B") ])
+        ctc_position="fixed", who_outlines=[ (0.8, "080808") ], what_outlines=[ (0.8, "FFE94B") ])
 
 
 #Background
@@ -84,41 +84,16 @@ image CG_Lucille01 = "images/CG/LucilleCG01.png"
 image CG_Lucille02 = "images/CG/LucilleCG02.png"
 
 
-image Selection_Forest = im.Scale("images/BG/Forest_Selection.png" , 280, 600)
-image Selection_Forest2 = im.Scale("images/BG/Forest_Selection.png" , 350, 640)
-image Selection_Castle = im.Scale("images/BG/Castle_Selection.png" , 280, 600)
-image Selection_Castle2 = im.Scale("images/BG/Castle_Selection.png" , 350, 640)
+image Selection_Forest = im.Scale("images/BG/Forest_Selection.png" , 350, 600)
+image Selection_Forest2 = im.Scale("images/BG/Forest_Selection.png" , 400, 640)
+image Selection_Castle = im.Scale("images/BG/Castle_Selection.png" , 350, 600)
+image Selection_Castle2 = im.Scale("images/BG/Castle_Selection.png" , 400, 640)
 
 
 
 
 #Sprite#####################################################################
 
-#Goddess
-image Goddess:
-        "images/Goddess/Goddess2.png"
-        xalign 0.5 yalign 0.7
-        linear 1.0 xalign 0.45 yalign 0.5
-        linear 2.0 xalign 0.40 yalign 0.55
-        linear 2.0 xalign 0.45 yalign 0.6
-        linear 1.0 xalign 0.50 yalign 0.55
-        linear 1.5 xalign 0.55 yalign 0.45
-        linear 1.0 xalign 0.60 yalign 0.55
-        linear 1.5 xalign 0.55 yalign 0.65
-        linear 2.0 xalign 0.5 yalign 0.7
-        repeat
-image Goddess_Wings:
-        "images/Goddess/Wings.png"
-        xalign 0.5 yalign 0.7
-        linear 1.2 xalign 0.45 yalign 0.55
-        linear 1.8 xalign 0.40 yalign 0.53
-        linear 2.2 xalign 0.45 yalign 0.55
-        linear 0.8 xalign 0.50 yalign 0.50
-        linear 1.7 xalign 0.55 yalign 0.44
-        linear 0.8 xalign 0.60 yalign 0.55
-        linear 1.7 xalign 0.55 yalign 0.60
-        linear 1.8 xalign 0.5 yalign 0.7
-        repeat
 
 #Goblin
 image Goblin_Weak:
@@ -133,7 +108,6 @@ image Lisa Smile:
 image Lisa Smile2:
         "images/Elisabeth/ElisabethPose02-1.png"
         yalign 0.5
-        ypos 1.08
 
 image Lisa Shy1:
         "images/Elisabeth/ElisabethPose01-2.png"
