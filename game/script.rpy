@@ -816,7 +816,7 @@ label adventureWorld:
         mc "Yeah, I realized that maybe that goddess gave me this power to help the people in this world."
         nr "I don’t need to be selfish. This is the right thing to do."
         lisa "Thank you very much [playerName]! I owe you a lot."
-    
+
     if adventureWorld_Good > adventureWorld_Bad:
         menu:
             "What do I need to do?"
@@ -1177,16 +1177,16 @@ label adventureWorld:
         menu:
                 "I love you Lisa":
                     jump adventureWorld_normal
-    
+
     if adventureWorld_Good > adventureWorld_Bad:
         menu:
                 "???":
                     jump adventureWorld_Good
                 "I love you Lisa":
                     jump adventureWorld_normal
-            
 
-label adventureWorld_normal:    
+
+label adventureWorld_normal:
     lisa "I lov--"
     # *SLASH*
     # *red screen*
@@ -1592,64 +1592,62 @@ label demonWorld:
     mc "What the hell was that!"
     show Lucille Smile with Dissolve(0.5)
     lucille "Oh.. did you not have roostergons in your previous world."
-    lucille "They crow during mornings to start the day."
-    mc "I’m pretty sure that was more roaring than crowing."
     mc "…"
     mc "Wait a minute… what are you doing here so early?"
     show Lucille Normal
     with Dissolve(0.5)
     lucille "Well... you are my familiar after all."
     lucille "It's not like I was excited to see you or anything."
+    show Lucille Normal 2
+    with Dissolve(0.5)
+    lucille "Come on familiar, Let's get going already."
+    mc "You're definitely excited."
+    nr "It's really early in the morning though."
 
 
     menu:
-        "I don’t dislike her but..."
-        "Maybe I can consider it":
+        "Should I get to work already?"
+        "Let's just relax first":
             $ demonWorld_Choice1 = 1
-        "I'm not ready for this.":
+        "All right, Let's get going.":
             $ demonWorld_Choice1 = 0
 
     if demonWorld_Choice1 == 1:
-        mc "Now that I think about it, maybe I’d like being with you"
-        mc "Let’s just get to know each other better first."
-        show Lucille Smug
-        with Dissolve(0.5)
-        lucille "Hoh.. did you change your mind?"
-        lucille "Have you come to realize what a great opportunity this is for you?."
-        lucille "Smart move mongrel."
-        show Lucille Smile
-        with Dissolve(0.5)
-        mc "I don’t feel like we’re going to get closer with you calling me mongrel all the time though."
-        lucille "Oh… Is that so?"
-        show Lucille Normal
-        with Dissolve(0.5)
-        lucille "…"
+        lucille "This is no time to relax!"
+        lucille "We still have tons of things to do."
+        mc "Zzzzzz..."
         show Lucille MadBlush
         with Dissolve(0.5)
-        lucille "Okay then… [playerName]...."
-        mc "..."
-        show Lucille Embarassed
+        lucille "Hey!"
+        lucille "Get up already!"
+        mc "No, I don't think I will.."
+        show Lucille Mad
         with Dissolve(0.5)
-        lucille "Well?"
-        show Lucille Normal 2
+        lucille "..."
+        show Lucille Power
         with Dissolve(0.5)
-        lucille "Say something!"
-        nr "So cute… I’m so glad I came to this world."
+        play sound "sounds/PowerUp9.mp3"
+        lucille "You stupid familiar!"
+        nr "Oh shoot, she's about to use magic."
+        show Lucille Angry
+        with Dissolve(0.5)
+        mc "Okaay! I'm awake now."
+        mc "Let's go! Adventure awaits!"
+        show Lucille Mad
+        lucille "Grrr..."
+
+
     if demonWorld_Choice1 == 0:
-        mc "This is just too soon for me."
-        mc "Sorry, but I can't promise to go through with a relationship like that yet."
-        lucille "What!? But you have already given your word."
-        lucille "You cannot just simply walk away now."
-        lucille "Are you that much of a coward?"
-        mc "Well... I guess I did give my word."
-        nr "I should at least try to commit to something."
-        nr "Am I really just gonna give up again so easily even in this world?"
-        mc "I apologize... you're right, I promised that I would become the demon king."
-        mc "I shouldn't be fazed by something like this."
-        lucille "Hmph! Looks like you've finally come to your senses."
-        lucille "Stupid mongrel…"
-        nr "I’ll try for now but…"
-        nr "Can I really become the demon king?"
+        show Lucille Smug
+        with Dissolve(0.5)
+        lucille "Oh! Sounds to me like you're the one excited."
+        mc "It is my first day after all."
+        show Lucille Smile
+        with Dissolve(0.5)
+        lucille "Good, I like that enthusiasm."
+        lucille "You have a lot to learn today."
+
+
 
     # Hallway
     scene BG_Castle_Hall_Day
@@ -1668,14 +1666,16 @@ label demonWorld:
     "Demon Maid" "Now you won’t be alone anymore."
     show Lucille Normal 2
     lucille "Hey!"
-    mc "Did you need a familiar king that badly?"
-    "Demon Maid" "Demon king? Milady just wanted to summon her soulma---"
-    show Lucille Mad
+    mc "Did you need a servant that badly?"
+    "Demon Maid" "Servant? Milady just wanted to summon her soulma---"
+    show Lucille Embarassed
     with Dissolve(0.5)
     lucille "Waah!!"
     show Lucille Embarassed
     with Dissolve(0.5)
     lucille "Look at the time! We better hurry up, we're already behind schedule."
+    show Lucille MadBlush
+    with Dissolve(0.5)
     "Demon Maid" "See you later then milady."
     # Footsteps
     hide Demon
@@ -1684,9 +1684,8 @@ label demonWorld:
     show Lucille Normal at center
     with Dissolve(0.5)
     lucille "We’re headed to where all the great powers of the world are stored."
-    lucille "You shall absorb as much power as you can today."
+    lucille "You shall gain as much power as you can today."
     mc "Oohhh that sounds exciting!"
-    nr "It sounds like we're gonna be going to some magical training room today."
     show Lucille Smile
     with Dissolve(0.5)
     lucille "You sound ecstatic, I can see why."
@@ -1772,7 +1771,7 @@ label demonWorld:
     lucille "Hey!? Don't try that hard."
     scene black
     with Dissolve(0.5)
-    play music 'sounds/Mysterious aura.mp3'
+    play music 'sounds/In the sunlight through the trees.mp3'
     mc "Ughh.. This is never gonna end."
     scene CG_Lucille01
     with fade
@@ -1945,7 +1944,7 @@ label demonWorld:
     nr "If I wanted to go on an adventure I would've just picked the adventure world."
     show Demon Maid at left
     with Dissolve(0.5)
-    "Demon Maid" "Feeding time!."
+    "Demon Maid" "Feeding time!"
     hide Demon
     with Dissolve(0.5)
     mc "Oh! That looks appetizing."
