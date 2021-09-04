@@ -3056,7 +3056,7 @@ label demonWorld_Bad:
     mc "Fated soulmate? Me?"
     "Demon Maid" "Yes, She discovered your destiny to be her lover using prediction royal magic and then summoned you here."
     mc "Ahahaha! Seriously!?"
-    mc "Is this supposed to be some silly little romance novel."
+    mc "Is this supposed to be some silly little romcom."
     mc "Still… I am grateful, I can become demon king thanks to her."
     "Demon Maid" "Eh!? How could you make me do that?"
     "Demon Maid" "That was really rude, you know."
