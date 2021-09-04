@@ -2214,13 +2214,20 @@ label demonWorld:
     show Demon Maid
     with Dissolve(0.5)
     "Demon Maid" "Time to eat!!."
+    hide Demon
+    with Dissolve(0.5)
     show Lucille Normal
     lucille "Can't you at least say something more classy."
     lucille "Maybe say 'dinner is served' or 'Bon Appetit' instead?"
+    hide Lucille
+    show Demon Maid
+    with Dissolve(0.5)
     "Demon Maid" "Don't wanna."
-    show Lucille Mad
-    lucille "So insubordinate."
     hide Demon
+    show Lucille Mad
+    with Dissolve(0.5)
+    lucille "So insubordinate."
+    show Lucille Normal
     with Dissolve(0.5)
     mc "Did you just say 'Bon Appetit'?"
     mc "You guys have french here?"
@@ -2229,8 +2236,8 @@ label demonWorld:
     lucille "I have no idea what you're talking about."
     lucille "Let's just eat already."
     mc "Okay.."
-    nr "I’ve been fed meals here countless times already."
-    nr "I kinda feel like I’m freeloading."
+    nr "I have eaten meals here countless times already."
+    nr "It kinda feels like I’m freeloading."
     show Lucille Normal 2
     with Dissolve(0.5)
     lucille "What's wrong? You look worried about something?"
@@ -2243,7 +2250,7 @@ label demonWorld:
     with Dissolve(0.5)
     lucille "Did you not have delicious food back in your previous world?"
     mc "We had tons of delicious food back in my previous world."
-    mc "I just never had the budget to try them."
+    mc "I just never had the budget for them most the time."
     show Lucille Smile
     with Dissolve(0.5)
     lucille "No worries, I can make them serve you any food you like."
@@ -2270,25 +2277,26 @@ label demonWorld:
     play music 'sounds/Want to know you.mp3'
     show Lucille Normal
     lucille "Hey [playerName]... I have something I want to talk about."
-    mc "What is it?"
-    lucille "You’ll finally be learning royal magic tomorrow."
+    mc "Hey Lucille.. what is it?"
+    lucille "Tomorrow... I will teach you royal magic."
+    mc "Oh Cool!"
     lucille "It is powerful magic but not exactly easy to handle."
     mc "Don’t worry I can probably handle myself well enough."
     show Lucille Normal 2
     with Dissolve(0.5)
     lucille "That’s not the problem."
     lucille "Royal magic… It may consume you."
-    lucille "Mortals were never meant to use domination on others."
+    lucille "Mortals were never meant to dominate each other."
     show Lucille Normal
     mc "But we’re different right? That’s why you can use it."
     mc "And why I need to be able to use it."
-    mc "Because I was summoned here to be the demon king."
+    mc "Because I was summoned here by you."
     show Lucille Normal
     lucille "No…"
     show Lucille Normal 2
     lucille "That’s not the purpose I summoned you for."
     show Lucille Smile
-    lucille "Please whatever happens, just promise me you'll always be yourself."
+    lucille "Just promise me you'll always be the idiot I know."
     mc "Okay… I promise."
     lucille "Don’t break that promise."
     show Lucille Smug
@@ -2301,11 +2309,10 @@ label demonWorld:
     with fade
     play music 'sounds/Killing time.mp3'
     nr "Today’s finally the day I learn royal magic."
-    nr "The most important step in becoming the demon king."
-    mc "This is bound to be an eventful day."
+    nr "The most important step in my journey."
     show Lucille Smile
     with Dissolve(0.5)
-    lucille "Indeed, just make sure you don’t mess up."
+    lucille "Make sure you don’t mess up."
     mc "Is learning royal magic going to be that hard?"
     lucille "No, it is actually quite easy once you understand the concept behind it."
     show Lucille Normal 2
@@ -2314,7 +2321,7 @@ label demonWorld:
     mc "I’m not that unskilled."
     show Lucille Smile
     with Dissolve(0.5)
-    lucille "Joking aside, I’m sure you’ll grasp it quickly, you were summoned to be the future demon king after all."
+    lucille "Joking aside, I’m sure you’ll grasp it quickly, you were summoned as my familiar after all."
     mc "Does that mean I was already summoned with magical talent?"
     show Lucille Smug
     with Dissolve(0.5)
@@ -2323,7 +2330,7 @@ label demonWorld:
     with Dissolve(0.5)
     lucille "You’ve greatly increased your intelligence thus greatly increasing your magical capabilities."
     mc "Was that what all that studying was for?"
-    lucille "Royal magic should be easier to activate now with your high intelligence."
+    lucille "Royal magic should be easier to activate now with your higher intelligence."
     lucille "It should come as second nature to you after getting used to it."
     mc "Cool."
     mc "By the way, Where in the castle are we gonna practice?"
@@ -2338,7 +2345,7 @@ label demonWorld:
     show Lucille Normal
     with Dissolve(0.5)
     lucille "Yes, the castle gardens shall suffice as a training area."
-    mc "Oh, I’ve never been there before."
+    mc "That's where you first summoned me right?"
     nr "Now that I think about it, I haven’t even really left the castle building since I got here."
     # Gardens
     scene BG_Garden_Day
