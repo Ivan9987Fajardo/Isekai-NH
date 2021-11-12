@@ -1577,10 +1577,12 @@ label demonWorld:
     mc "Yeah yeah.."
     mc "Time to sleep then."
     hide Lucille
+    scene black
     with circleirisin
-    nr "I fall asleep almost immediately as I lay into the soft bed more comfortable than any bed I’ve used back in my past world."
+    nr "I fall asleep almost immediately as I lay down."
     # Fade to black
     lucille "Good night my familiar..."
+    play sound 'sounds/Good night kiss.mp3'
     # Sleep tone music
     # Roaaar
     play audio 'sounds/Scream_Female01-1.mp3'
@@ -1594,11 +1596,11 @@ label demonWorld:
     lucille "Oh.. did you not have roostergons in your previous world."
     mc "…"
     mc "Wait a minute… what are you doing here so early?"
-    show Lucille Normal
+    show Lucille Normal 2
     with Dissolve(0.5)
     lucille "Well... you are my familiar after all."
     lucille "It's not like I was excited to see you or anything."
-    show Lucille Normal 2
+    show Lucille Pose
     with Dissolve(0.5)
     lucille "Come on familiar, Let's get going already."
     mc "You're definitely excited."
@@ -1613,6 +1615,8 @@ label demonWorld:
             $ demonWorld_Choice1 = 0
 
     if demonWorld_Choice1 == 1:
+        show Lucille Mad
+        with Dissolve(0.5)
         lucille "This is no time to relax!"
         lucille "We still have tons of things to do."
         mc "Zzzzzz..."
@@ -1740,8 +1744,8 @@ label demonWorld:
     show Lucille Smile
     with Dissolve(0.5)
     lucille "Oh, this one is good."
-    nr "So small though, I wonder if she’s even legal to marry yet?"
-    nr "I bet she’s one those 5000 year old demon lolis."
+    nr "So small though, I wonder if she’s even legal?"
+    nr "I bet she’s actually one of those 5000 year old demon girls that don't show their age."
     nr "No problem with me though."
     show Lucille Smug
     with Dissolve(0.5)
