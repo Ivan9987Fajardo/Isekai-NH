@@ -2133,7 +2133,7 @@ label demonWorld:
     show Lucille Mad
     with Dissolve(0.5)
     lucille "No it is not!"
-    lucille "Writing a story isn't actually as easy as it seems."
+    lucille "Writing a novel isn't as easy as it seems."
     show Lucille Normal
     with Dissolve(0.5)
     lucille "Creativity is especially hard to grasp."
@@ -2150,7 +2150,7 @@ label demonWorld:
     mc "Oh? Why so inspired all of a sudden?"
     show Lucille Smile
     with Dissolve(0.5)
-    lucille "It’s probably because I’ve recently been watching some hopeless idiot strive to achieve things far beyond his capabilities."
+    lucille "It’s probably because I’ve recently been watching some hopeless idiot try his best."
     nr "That guy must be some idiot for Lucille to call him hopeless."
     show Lucille Normal
     with Dissolve(0.5)
@@ -2163,13 +2163,13 @@ label demonWorld:
     mc "This place is.."
     show Lucille Normal 2
     with Dissolve(0.5)
-    lucille "This place is the very heart of the castle itself"
     lucille "The royal throne room."
+    lucille "This place is the very heart of the castle itself"
     mc "Cool!"
     mc "Can I sit on the throne?"
     show Lucille Smug
     with Dissolve(0.5)
-    lucille "Sorry, But only a noble demon crowned with the highest title such as me may sit on the throne."
+    lucille "Sorry, But only an esteemed demon such as myself may sit on the throne."
     mc "Exclusively for the demon queen then?"
     show Lucille Smile
     with Dissolve(0.5)
@@ -2189,10 +2189,10 @@ label demonWorld:
     lucille "Theoretically, It’s for holding an audience with the queen or something."
     lucille "But most of the time it is left unused."
     lucille "It’s still an important part of the castle regardless."
-    mc "What a waste of a beautiful throne to be unused though."
+    mc "What a waste of a cool throne to be unused though."
     show Lucille Smile
     with Dissolve(0.5)
-    lucille "Sometimes I like to just sit on it and relax."
+    lucille "Well.. Sometimes I like to just sit on it and relax."
     mc "Really?"
     lucille "I don’t know why exactly but it feels pretty empowering."
     nr "Somehow the image of Lucille on the throne seems cute."
@@ -2228,6 +2228,7 @@ label demonWorld:
     with Dissolve(0.5)
     "Demon Maid" "Don't wanna."
     hide Demon
+    with Dissolve(0.5)
     show Lucille Mad
     with Dissolve(0.5)
     lucille "So insubordinate."
@@ -2280,6 +2281,7 @@ label demonWorld:
     with fade
     play music 'sounds/Want to know you.mp3'
     show Lucille Normal
+    with Dissolve(0.5)
     lucille "Hey [playerName]... I have something I want to talk about."
     mc "Hey Lucille.. what is it?"
     lucille "Tomorrow... I will teach you royal magic."
@@ -2290,16 +2292,20 @@ label demonWorld:
     with Dissolve(0.5)
     lucille "That’s not the problem."
     lucille "Royal magic… It may consume you."
-    lucille "Mortals were never meant to dominate each other."
+    lucille "Mortals were never meant wield it."
     show Lucille Normal
+    with Dissolve(0.5)
     mc "But we’re different right? That’s why you can use it."
     mc "And why I need to be able to use it."
     mc "Because I was summoned here by you."
     show Lucille Normal
+    with Dissolve(0.5)
     lucille "No…"
     show Lucille Normal 2
+    with Dissolve(0.5)
     lucille "That’s not the purpose I summoned you for."
     show Lucille Smile
+    with Dissolve(0.5)
     lucille "Just promise me you'll always be the idiot I know."
     mc "Okay… I promise."
     lucille "Don’t break that promise."
