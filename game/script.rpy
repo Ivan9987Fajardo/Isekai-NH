@@ -2340,9 +2340,9 @@ label demonWorld:
     with Dissolve(0.5)
     lucille "You’ve greatly increased your intelligence thus greatly increasing your magical capabilities."
     mc "Was that what all that studying was for?"
-    lucille "Royal magic should be easier to activate now with your higher intelligence."
+    lucille "Royal magic should be easier to activate now."
     lucille "It should come as second nature to you after getting used to it."
-    mc "Cool."
+    mc "Okay."
     mc "By the way, Where in the castle are we gonna practice?"
     show Lucille Happy
     with Dissolve(0.5)
