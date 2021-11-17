@@ -1664,6 +1664,8 @@ label demonWorld:
     show Lucille Smile at left
     with Dissolve(0.5)
     lucille "Good morning."
+    show Demon Maid 2
+    with Dissolve(0.5)
     "Demon Maid" "Oh, Milady is that finally him?"
     mc "Oh, hello."
     "Demon Maid" "After all this time you have successfully summoned him."
@@ -1671,6 +1673,8 @@ label demonWorld:
     show Lucille Normal 2
     lucille "Hey!"
     mc "Did you need a servant that badly?"
+    show Demon Maid
+    with Dissolve(0.5)
     "Demon Maid" "Servant? Milady just wanted to summon her soulma---"
     show Lucille Embarassed
     with Dissolve(0.5)
@@ -1942,14 +1946,22 @@ label demonWorld:
     with Dissolve(0.5)
     lucille "I’d rather prefer staying here all alone with all my books."
     nr "Oh she’s kind of like a shut-in then."
+    show Lucille Normal 2
+    with Dissolve(0.5)
     lucille "What about you [playerName]?"
     lucille "Would you prefer to travel around the world than stay here with me?"
     mc "I guess I’m cool with staying here."
+    show Lucille Smile
+    with Dissolve(0.5)
     nr "If I wanted to go on an adventure I would've just picked the adventure world."
-    show Demon Maid at left
+    hide Lucille
+    with Dissolve(0.5)
+    show Demon Maid
     with Dissolve(0.5)
     "Demon Maid" "Feeding time!"
     hide Demon
+    with Dissolve(0.5)
+    show Lucille Smile
     with Dissolve(0.5)
     mc "Oh! That looks appetizing."
     lucille "I assure you, the meals served here are all top notch."
@@ -1981,21 +1993,22 @@ label demonWorld:
     with fade
     play music 'sounds/Smile and tears.mp3'
     mc "Man I’m pooped, I’ve never worked this hard in my life."
-    show Lucille Normal
+    show Lucille Smile
     with Dissolve(0.5)
     lucille "Yes, even I have to admit today felt more tiring with you around."
-    nr "Oh right I have to sleep in the same room as Lucille."
+    mc "Oh, Hey Lucille, What's up?."
     lucille "Are you not going to bed yet?"
     mc "Uhhh yeah I’ll go to sleep in a while."
     lucille "Okay…"
     show Lucille Normal 2
     with Dissolve(0.5)
-    lucille "Say.. I’ve put you through a lot today haven’t I."
+    lucille "Say..."
+    lucille "I’ve put you through a lot today haven’t I."
     mc "Yeah, I’ll say."
     lucille "I wasn’t being too hard on you was I?"
     show Lucille Normal
     with Dissolve(0.5)
-    lucille "Do you regret coming to this world now?"
+    lucille "Did I make you regret coming to this world now?"
     # nr "Lucille looks like she’s serious."
 
     menu:
@@ -2009,16 +2022,16 @@ label demonWorld:
         show Lucille Smile
         with Dissolve(0.5)
         lucille "Really?"
-        show Lucille Normal
+        show Lucille Normal 2
         with Dissolve(0.5)
         lucille "But I have been making you follow my selfish requests ever since you got here."
         mc "It wasn’t anything too hard."
         mc "Besides, I gave my word right?"
-        mc "Just keep em’ coming, I’ll take on any challenge."
+        mc "Just keep em’ coming, I’ll take on anything."
         show Lucille Embarassed
         with Dissolve(0.5)
         lucille "…"
-        show Lucille Smile
+        show Lucille HappyBlush
         with Dissolve(0.5)
         lucille "Really? You would go that far for me?"
         show Lucille Normal 2
@@ -2026,10 +2039,10 @@ label demonWorld:
         lucille "Aren’t I being a burden to you?"
         mc "Of course not."
         mc "Today’s been really fun."
-        show Lucille Smile
+        show Lucille HappyBlush
         with Dissolve(0.5)
         lucille "That’s good then."
-        mc "I’m gonna become the best damn demon king ever."
+        mc "I’m gonna become the best damn familiar ever."
         lucille "Yes, and I’ll be with you every step through the way."
         mc "I wouldn't want it any other way."
         show Lucille Happy
@@ -2040,7 +2053,7 @@ label demonWorld:
         show Lucille Smile
         with Dissolve(0.5)
         nr "I can feel that she trusts me a little bit now."
-        lucille "It’s pretty late, let us go to sleep already."
+        lucille "It’s pretty late, make sure you get a good night's sleep ."
         show Lucille Smug
         with Dissolve(0.5)
         lucille "I’m gonna make sure to work even harder tomorrow."
@@ -2052,14 +2065,17 @@ label demonWorld:
         lucille "Is that so."
         lucille "Sorry for making you put up with me today then."
         mc "Nevermind that, what’s done is done."
-        lucille "I kind of expected you to be a better person."
-        mc "Nah, I’ve never been anything special."
+        lucille "I guess I expected too much from you then."
+        mc "I’ve never been anything special."
         mc "I’ll just keep doing the things I can do but I’ll never try too hard in the things I can't do."
         lucille "You believe in such a thing…"
         lucille "Such morals should be considered wrong."
         lucille "How disappointing."
 
     # Sleep Tone Music
+    play sound 'sounds/Good night kiss.mp3'
+    scene black
+    with Dissolve(2.5)
     # Library
     scene BG_Library
     with fade
@@ -2309,9 +2325,11 @@ label demonWorld:
     lucille "Just promise me you'll always be the idiot I know."
     mc "Okay… I promise."
     lucille "Don’t break that promise."
-    show Lucille Smug
+    show Lucille Angry
     with Dissolve(0.5)
     lucille "If you do, I’ll personally be the one to lay down your punishment."
+    show Lucille Smile
+    with Dissolve(0.5)
     mc "C’mon, That’s scary."
     # Sleep Tone Music
     # Hallway
@@ -2373,7 +2391,7 @@ label demonWorld:
     lucille "Try to use more formal speech like me."
     mc "Speaking formally will help me cast magic?"
     mc "Seriously? How does that make any sense?"
-    show Lucille Happy
+    show Lucille Normal 2
     with Dissolve(0.5)
     lucille "Formality is a sign of self control and discipline after all."
     lucille "Both of which are essential to control magic, especially royal magic."
@@ -2394,6 +2412,7 @@ label demonWorld:
     show Lucille Pose
     with Dissolve(0.5)
     lucille "That fountain over there is powered by magic."
+    show Lucille Power
     lucille "Turn Off fountain!"
     nr "The water in the fountain suddenly stops flowing by her command."
     lucille "Try to command the fountain to turn on."
@@ -2404,9 +2423,10 @@ label demonWorld:
     mc "Go Fountain Water!!"
     show Lucille Mad
     with Dissolve(0.5)
-    lucille "Formal speech!!"
+    lucille "Not like that! Say it properly!"
     mc "Oh right…"
     mc "Turn On Fountain!"
+    with flashbulb
     mc "…"
     mc "Nothing happened."
     show Lucille Normal
@@ -2414,13 +2434,11 @@ label demonWorld:
     lucille "Your command lacked authority."
     mc "Authority?"
     lucille "You have to think that you are the fountain’s superior."
-    lucille "Remember that you are the future demon king."
+    lucille "Put it in its rightful place."
     lucille "The very rules of this world shall bend to your will."
-    nr "She’s right, I have authority in this world. I was summoned to be the demon king."
-    nr "I will be the demon king…"
-    nr "No… I AM the demon king!"
+    nr "She’s right, I'm better than you fountain!."
     mc "Turn On Fountain!"
-    with flashbulb
+
     # Whoosh
     play sound 'sounds/PowerUp9.mp3'
     show Lucille Happy
@@ -2445,7 +2463,7 @@ label demonWorld:
     hide Lucille
     mc "Hmmmm…"
     mc "I know."
-    mc "Leaves Scatter!"
+    mc "Scatter!"
     # Whoosh
     play sound 'sounds/Wind-Synthetic02-1.mp3'
     mc "Blow Wind!"
